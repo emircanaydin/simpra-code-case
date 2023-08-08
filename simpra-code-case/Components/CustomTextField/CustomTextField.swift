@@ -6,20 +6,19 @@
 //
 
 import UIKit
+import SnapKit
 
 class CustomTextField: GenericBaseView<CustomTextFieldData> {
     var textDidChangeWorkItem: DispatchWorkItem?
     
     private lazy var containerView: UIView = {
         let temp = UIView()
-        temp.translatesAutoresizingMaskIntoConstraints = false
         temp.backgroundColor = .clear
         return temp
     }()
     
     private lazy var mainStackView: UIStackView = {
         let temp = UIStackView(arrangedSubviews: [textField])
-        temp.translatesAutoresizingMaskIntoConstraints = false
         temp.axis = .vertical
         temp.distribution = .fill
         temp.alignment = .fill
@@ -29,7 +28,6 @@ class CustomTextField: GenericBaseView<CustomTextFieldData> {
     
     lazy var textField: UITextField = {
         let temp = UITextField()
-        temp.translatesAutoresizingMaskIntoConstraints = false
         temp.clearButtonMode = .never
         temp.textColor = Colors.defaultGray.value
         temp.tintColor = Colors.defaultGray.value
@@ -58,20 +56,17 @@ class CustomTextField: GenericBaseView<CustomTextFieldData> {
         addSubview(containerView)
         containerView.addSubview(mainStackView)
         
-        NSLayoutConstraint.activate([
-            containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            containerView.topAnchor.constraint(equalTo: topAnchor),
-            containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
-            textField.heightAnchor.constraint(equalToConstant: 50),
-            
-            mainStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            mainStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            mainStackView.topAnchor.constraint(equalTo: containerView.topAnchor),
-            mainStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
-        ])
-
+        containerView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+        mainStackView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+        textField.snp.makeConstraints { make in
+            make.height.equalTo(50)
+        }
     }
     
     func addBottomLine() {

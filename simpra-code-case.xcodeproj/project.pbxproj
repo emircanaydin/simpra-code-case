@@ -21,6 +21,7 @@
 		9064ABE02A82670700F53F5F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABDF2A82670700F53F5F /* BaseCoordinator.swift */; };
 		9064ABE22A82671E00F53F5F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABE12A82671E00F53F5F /* Coordinator.swift */; };
 		9064ABE62A82677700F53F5F /* Assembler+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABE52A82677700F53F5F /* Assembler+Extensions.swift */; };
+		9064ABE92A8268C600F53F5F /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABE82A8268C600F53F5F /* DatabaseManager.swift */; };
 		906B857F2A8263F600DFBB99 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 906B857E2A8263F600DFBB99 /* Realm */; };
 		906B85812A8263F600DFBB99 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85802A8263F600DFBB99 /* RealmSwift */; };
 		906B85842A82640B00DFBB99 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85832A82640B00DFBB99 /* SwinjectAutoregistration */; };
@@ -66,6 +67,7 @@
 		9064ABDF2A82670700F53F5F /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		9064ABE12A82671E00F53F5F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		9064ABE52A82677700F53F5F /* Assembler+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembler+Extensions.swift"; sourceTree = "<group>"; };
+		9064ABE82A8268C600F53F5F /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				9064ABCE2A8265F100F53F5F /* BaseModules */,
+				9064ABE72A8268B000F53F5F /* Managers */,
 				9064ABE32A82676500F53F5F /* Utilities */,
 				90577C5E2A825F3400B8CE6C /* AppDelegate.swift */,
 				90577C672A825F3500B8CE6C /* Assets.xcassets */,
@@ -202,6 +205,14 @@
 				9064ABE52A82677700F53F5F /* Assembler+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9064ABE72A8268B000F53F5F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABE82A8268C600F53F5F /* DatabaseManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +363,7 @@
 			files = (
 				9064ABE22A82671E00F53F5F /* Coordinator.swift in Sources */,
 				90577C5F2A825F3400B8CE6C /* AppDelegate.swift in Sources */,
+				9064ABE92A8268C600F53F5F /* DatabaseManager.swift in Sources */,
 				9064ABD32A82661100F53F5F /* BaseView.swift in Sources */,
 				9064ABE62A82677700F53F5F /* Assembler+Extensions.swift in Sources */,
 				9064ABD52A82662D00F53F5F /* BaseViewController.swift in Sources */,

@@ -28,6 +28,9 @@
 		9064ABF42A826C7300F53F5F /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABF32A826C7300F53F5F /* AppViewModel.swift */; };
 		9064ABF72A826CE100F53F5F /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABF62A826CE100F53F5F /* ViewControllerUtils.swift */; };
 		9064ABF92A826D0000F53F5F /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABF82A826D0000F53F5F /* SplashCoordinator.swift */; };
+		9064ABFE2A826E0E00F53F5F /* AssemblerResolverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABFD2A826E0E00F53F5F /* AssemblerResolverDelegate.swift */; };
+		9064AC012A826E2700F53F5F /* AppCoordinatorAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC002A826E2700F53F5F /* AppCoordinatorAssembler.swift */; };
+		9064AC032A826E3C00F53F5F /* SplashCoordinatorAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC022A826E3C00F53F5F /* SplashCoordinatorAssembler.swift */; };
 		906B857F2A8263F600DFBB99 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 906B857E2A8263F600DFBB99 /* Realm */; };
 		906B85812A8263F600DFBB99 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85802A8263F600DFBB99 /* RealmSwift */; };
 		906B85842A82640B00DFBB99 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85832A82640B00DFBB99 /* SwinjectAutoregistration */; };
@@ -80,6 +83,9 @@
 		9064ABF32A826C7300F53F5F /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		9064ABF62A826CE100F53F5F /* ViewControllerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
 		9064ABF82A826D0000F53F5F /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		9064ABFD2A826E0E00F53F5F /* AssemblerResolverDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerResolverDelegate.swift; sourceTree = "<group>"; };
+		9064AC002A826E2700F53F5F /* AppCoordinatorAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorAssembler.swift; sourceTree = "<group>"; };
+		9064AC022A826E3C00F53F5F /* SplashCoordinatorAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinatorAssembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,7 +230,8 @@
 		9064ABE72A8268B000F53F5F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				9064ABE82A8268C600F53F5F /* DatabaseManager.swift */,
+				9064ABFA2A826DEC00F53F5F /* DatabaseManager */,
+				9064ABFB2A826DF200F53F5F /* DependencyManager */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -263,6 +270,40 @@
 				9064ABF62A826CE100F53F5F /* ViewControllerUtils.swift */,
 			);
 			path = ViewControllerUtils;
+			sourceTree = "<group>";
+		};
+		9064ABFA2A826DEC00F53F5F /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABE82A8268C600F53F5F /* DatabaseManager.swift */,
+			);
+			path = DatabaseManager;
+			sourceTree = "<group>";
+		};
+		9064ABFB2A826DF200F53F5F /* DependencyManager */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABFC2A826E0700F53F5F /* Protocols */,
+				9064ABFF2A826E1800F53F5F /* Assemblers */,
+			);
+			path = DependencyManager;
+			sourceTree = "<group>";
+		};
+		9064ABFC2A826E0700F53F5F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABFD2A826E0E00F53F5F /* AssemblerResolverDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9064ABFF2A826E1800F53F5F /* Assemblers */ = {
+			isa = PBXGroup;
+			children = (
+				9064AC002A826E2700F53F5F /* AppCoordinatorAssembler.swift */,
+				9064AC022A826E3C00F53F5F /* SplashCoordinatorAssembler.swift */,
+			);
+			path = Assemblers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +457,7 @@
 				90577C5F2A825F3400B8CE6C /* AppDelegate.swift in Sources */,
 				9064ABF42A826C7300F53F5F /* AppViewModel.swift in Sources */,
 				9064ABF22A826C6600F53F5F /* AppCoordinator.swift in Sources */,
+				9064AC012A826E2700F53F5F /* AppCoordinatorAssembler.swift in Sources */,
 				9064ABE92A8268C600F53F5F /* DatabaseManager.swift in Sources */,
 				9064ABEF2A826BE400F53F5F /* SplashViewController.swift in Sources */,
 				9064ABD32A82661100F53F5F /* BaseView.swift in Sources */,
@@ -423,10 +465,12 @@
 				9064ABE62A82677700F53F5F /* Assembler+Extensions.swift in Sources */,
 				9064ABD52A82662D00F53F5F /* BaseViewController.swift in Sources */,
 				9064ABD72A82669200F53F5F /* GenericBaseView.swift in Sources */,
+				9064AC032A826E3C00F53F5F /* SplashCoordinatorAssembler.swift in Sources */,
 				9064ABE02A82670700F53F5F /* BaseCoordinator.swift in Sources */,
 				9064ABDB2A8266BF00F53F5F /* BaseViewModelDelegate.swift in Sources */,
 				9064ABDD2A8266DF00F53F5F /* GenericValueProtocol.swift in Sources */,
 				9064ABF72A826CE100F53F5F /* ViewControllerUtils.swift in Sources */,
+				9064ABFE2A826E0E00F53F5F /* AssemblerResolverDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

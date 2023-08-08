@@ -45,7 +45,6 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
         coordinator.listenSplahCoordinatorFinishes(completion: commonApplicationLauncher).disposed(by: disposeBag)
         
         ViewControllerUtils.setRootViewController(window: window, viewController: coordinator.viewContoller, withAnimation: true)
-        
     }
     
     private func registerTutorialObservers() {

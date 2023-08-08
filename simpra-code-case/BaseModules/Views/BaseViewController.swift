@@ -21,6 +21,11 @@ class BaseViewController<T: BaseViewModelDelegate>: UIViewController {
         return String(describing: self)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        prepareViewControllerConfigurations()
+    }
+    
     func prepareViewControllerConfigurations() {
         
     }

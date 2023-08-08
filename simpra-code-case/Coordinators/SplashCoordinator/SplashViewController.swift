@@ -11,5 +11,6 @@ class SplashViewController: BaseViewController<SplashScreenViewModel> {
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
         viewModel.startSplashProcess()
+        self.view.backgroundColor = .orange
     }
 }

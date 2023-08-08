@@ -29,6 +29,7 @@ class SplashScreenViewModel: BaseViewModelDelegate {
     }
     
     func fireSplashProcessFinish() {
+        print("FİNİSH")
         splashFinalize.accept(true)
     }
 }

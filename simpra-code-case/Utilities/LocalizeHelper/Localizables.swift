@@ -18,6 +18,8 @@ enum Localizables: String, GenericValueProtocol {
     case username = "username"
     case password = "password"
     case login = "login"
+    case userNotFound = "user_not_found"
+    case usernameBlank = "username_blank"
 }
 
 extension String {

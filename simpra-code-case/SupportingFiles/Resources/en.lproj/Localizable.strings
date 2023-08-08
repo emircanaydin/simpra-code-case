@@ -10,4 +10,6 @@
 "username" = "Username";
 "password" = "Password";
 "login" = "Login";
+"user_not_found" = "User not found!";
+"username_blank" = "Username field is blank!";
 

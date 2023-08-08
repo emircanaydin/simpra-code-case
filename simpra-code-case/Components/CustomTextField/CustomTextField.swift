@@ -11,6 +11,8 @@ import SnapKit
 class CustomTextField: GenericBaseView<CustomTextFieldData> {
     var textDidChangeWorkItem: DispatchWorkItem?
     
+    private var isError: Bool = false
+    
     private lazy var containerView: UIView = {
         let temp = UIView()
         temp.backgroundColor = .clear
@@ -18,7 +20,7 @@ class CustomTextField: GenericBaseView<CustomTextFieldData> {
     }()
     
     private lazy var mainStackView: UIStackView = {
-        let temp = UIStackView(arrangedSubviews: [textField])
+        let temp = UIStackView(arrangedSubviews: [textField, errorLabel])
         temp.axis = .vertical
         temp.distribution = .fill
         temp.alignment = .fill
@@ -35,6 +37,17 @@ class CustomTextField: GenericBaseView<CustomTextFieldData> {
         return temp
     }()
     
+    private lazy var errorLabel: UILabel = {
+        let temp = UILabel()
+        temp.textColor = Colors.errorRed.value
+        temp.font = FontManager.robotoRegular(14).value
+        temp.text = " "
+        temp.contentMode = .left
+        temp.textAlignment = .left
+        temp.isHidden = true
+        return temp
+    }()
+    
     //MARK: - Override Methods
     override func addMajorFields() {
         super.addMajorFields()
@@ -44,6 +57,15 @@ class CustomTextField: GenericBaseView<CustomTextFieldData> {
     override func setupViews() {
         super.setupViews()
         textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    }
+    
+    // MARK: Public Methods
+    func error(message: String) {
+        textField.startShakeAnimation()
+        errorLabel.isHidden = false
+        errorLabel.text = message
+        addBottomLine(color: Colors.errorRed.value)
+        self.isError = true
     }
     
     //MARK: - Private Methods
@@ -64,21 +86,27 @@ class CustomTextField: GenericBaseView<CustomTextFieldData> {
         }
     }
     
-    func addBottomLine() {
+    private func addBottomLine(color: UIColor) {
         DispatchQueue.main.async {
+            
             let bottomLine = CALayer()
             bottomLine.frame = CGRect(x: 0.0, y: self.textField.frame.height - 1, width: self.textField.frame.width, height: 1.0)
-            bottomLine.backgroundColor = Colors.simpraOrange.value.cgColor
+            bottomLine.backgroundColor = color.cgColor
             self.textField.borderStyle = UITextField.BorderStyle.none
             self.textField.layer.addSublayer(bottomLine)
         }
     }
     
     override func didMoveToWindow() {
-        addBottomLine()
+        addBottomLine(color: Colors.simpraOrange.value)
     }
     
     @objc public func textFieldDidChange(_ textField: UITextField) {
+        if isError {
+            errorLabel.isHidden = true
+            addBottomLine(color: Colors.simpraOrange.value)
+        }
+        
         textDidChangeWorkItem?.cancel()
         
         guard let text = textField.text else {

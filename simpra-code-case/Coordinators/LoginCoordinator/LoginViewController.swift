@@ -65,6 +65,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
         addComponents()
         configureLoginButton()
         configureUsernameField()
+        listenLoginState()
     }
     
     private func addComponents() {
@@ -105,6 +106,19 @@ class LoginViewController: BaseViewController<LoginViewModel> {
             make.top.equalTo(passwordTextField.snp.bottom).offset(20)
             make.horizontalEdges.equalToSuperview().inset(Const.horizontalPadding)
             make.height.equalTo(Const.buttonHeight)
+        }
+    }
+    
+    private func listenLoginState() {
+        viewModel.listenLoginState { state in
+            switch state {
+            case .userNotFound:
+                self.usernameTextField.error(message: Localizables.userNotFound.value)
+            case .usernameBlank:
+                self.usernameTextField.error(message: Localizables.usernameBlank.value)
+            default:
+                break
+            }
         }
     }
     

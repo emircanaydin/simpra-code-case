@@ -8,6 +8,12 @@
 import UIKit
 
 extension UIView {
+    func removeAllLayers() {
+        guard let sublayers = self.layer.sublayers else { return }
+        for layer in sublayers {
+            layer.removeFromSuperlayer()
+        }
+    }
     func startTappedAnimation(with completion: @escaping (Bool) -> Void) {
         transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
         
@@ -16,5 +22,13 @@ extension UIView {
         }, completion: completion)
         
         self.layoutIfNeeded()
+    }
+    
+    func startShakeAnimation() {
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
+        animation.duration = 0.6
+        animation.values = [-20.0, 20.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
+        layer.add(animation, forKey: "shake")
     }
 }

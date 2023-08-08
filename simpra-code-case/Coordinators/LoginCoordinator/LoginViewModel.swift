@@ -10,9 +10,20 @@ import RxSwift
 import RxCocoa
 import NetworkEntityLayer
 
+typealias LoginStateBlock = (LoginState) -> Void
+
+enum LoginState {
+    case success
+    case passwordRequired
+    case usernameBlank
+    case userNotFound
+}
+
 class LoginViewModel: BaseViewModelDelegate {
     var dismissInformer: PublishSubject<Void>?
     var username: String = ""
+    
+    private var loginState: LoginStateBlock?
     
     private var loginCallback: LoginCallback
     private var loginUseCase: LoginUseCase
@@ -26,13 +37,20 @@ class LoginViewModel: BaseViewModelDelegate {
         guard let self = self else { return }
         switch result {
         case .success(let response):
-            print("\(response.username)")
+            self.loginState?(.success)
         case .failure(let error):
-            print("error")
+            self.loginState?(.userNotFound)
         }
     }
     
+    func listenLoginState(with completion: @escaping LoginStateBlock) {
+        loginState = completion
+    }
+    
     func login() {
+        if username == "" {
+            loginState?(.usernameBlank)
+        }
         loginCallback.commonResult(completion: loginListener)
         loginUseCase.execute(useCaseCallBack: loginCallback, params: username)
     }

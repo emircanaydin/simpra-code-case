@@ -27,7 +27,7 @@ class BaseViewController<T: BaseViewModelDelegate>: UIViewController {
     }
     
     func prepareViewControllerConfigurations() {
-        
+        self.view.backgroundColor = .white
     }
     
     private lazy var activityIndicator: UIActivityIndicatorView = {

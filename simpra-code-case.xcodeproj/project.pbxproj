@@ -38,6 +38,11 @@
 		9064AC122A8274B700F53F5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC112A8274B700F53F5F /* LoginViewController.swift */; };
 		9064AC142A8274D100F53F5F /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC132A8274D100F53F5F /* LoginCoordinator.swift */; };
 		9064AC162A82761D00F53F5F /* LoginCoordinatorAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC152A82761D00F53F5F /* LoginCoordinatorAssembler.swift */; };
+		9064AC1A2A82829400F53F5F /* CustomTextFieldData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC192A82829400F53F5F /* CustomTextFieldData.swift */; };
+		9064AC1C2A8282A000F53F5F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC1B2A8282A000F53F5F /* CustomTextField.swift */; };
+		9064AC1F2A82844000F53F5F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC1E2A82844000F53F5F /* Colors.swift */; };
+		9064AC222A828B2300F53F5F /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC212A828B2300F53F5F /* ImageHelper.swift */; };
+		9064AC242A828BDE00F53F5F /* Constraint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC232A828BDE00F53F5F /* Constraint+Extensions.swift */; };
 		906B857F2A8263F600DFBB99 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 906B857E2A8263F600DFBB99 /* Realm */; };
 		906B85812A8263F600DFBB99 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85802A8263F600DFBB99 /* RealmSwift */; };
 		906B85842A82640B00DFBB99 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85832A82640B00DFBB99 /* SwinjectAutoregistration */; };
@@ -100,6 +105,11 @@
 		9064AC112A8274B700F53F5F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9064AC132A8274D100F53F5F /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		9064AC152A82761D00F53F5F /* LoginCoordinatorAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorAssembler.swift; sourceTree = "<group>"; };
+		9064AC192A82829400F53F5F /* CustomTextFieldData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldData.swift; sourceTree = "<group>"; };
+		9064AC1B2A8282A000F53F5F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		9064AC1E2A82844000F53F5F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		9064AC212A828B2300F53F5F /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		9064AC232A828BDE00F53F5F /* Constraint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraint+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				9064ABCE2A8265F100F53F5F /* BaseModules */,
+				9064AC172A82827200F53F5F /* Components */,
 				9064AC072A82712900F53F5F /* Models */,
 				9064ABE72A8268B000F53F5F /* Managers */,
 				9064ABEA2A826B8300F53F5F /* Coordinators */,
@@ -229,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				9064AC0A2A8271BC00F53F5F /* AppConstants */,
+				9064AC1D2A82842F00F53F5F /* ColorHelper */,
+				9064AC202A828B1900F53F5F /* ImageHelper */,
 				9064ABE42A82676B00F53F5F /* Extensions */,
 				9064ABF52A826CCE00F53F5F /* ViewControllerUtils */,
 			);
@@ -239,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				9064ABE52A82677700F53F5F /* Assembler+Extensions.swift */,
+				9064AC232A828BDE00F53F5F /* Constraint+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,6 +371,39 @@
 				9064AC0F2A82748D00F53F5F /* LoginViewModel.swift */,
 			);
 			path = LoginCoordinator;
+			sourceTree = "<group>";
+		};
+		9064AC172A82827200F53F5F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9064AC182A82827800F53F5F /* CustomTextField */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9064AC182A82827800F53F5F /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				9064AC1B2A8282A000F53F5F /* CustomTextField.swift */,
+				9064AC192A82829400F53F5F /* CustomTextFieldData.swift */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+		9064AC1D2A82842F00F53F5F /* ColorHelper */ = {
+			isa = PBXGroup;
+			children = (
+				9064AC1E2A82844000F53F5F /* Colors.swift */,
+			);
+			path = ColorHelper;
+			sourceTree = "<group>";
+		};
+		9064AC202A828B1900F53F5F /* ImageHelper */ = {
+			isa = PBXGroup;
+			children = (
+				9064AC212A828B2300F53F5F /* ImageHelper.swift */,
+			);
+			path = ImageHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,8 +552,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9064AC1C2A8282A000F53F5F /* CustomTextField.swift in Sources */,
 				9064AC102A82748D00F53F5F /* LoginViewModel.swift in Sources */,
 				9064ABE22A82671E00F53F5F /* Coordinator.swift in Sources */,
+				9064AC242A828BDE00F53F5F /* Constraint+Extensions.swift in Sources */,
 				9064ABF92A826D0000F53F5F /* SplashCoordinator.swift in Sources */,
 				90577C5F2A825F3400B8CE6C /* AppDelegate.swift in Sources */,
 				9064ABF42A826C7300F53F5F /* AppViewModel.swift in Sources */,
@@ -515,6 +564,7 @@
 				9064AC012A826E2700F53F5F /* AppCoordinatorAssembler.swift in Sources */,
 				9064ABE92A8268C600F53F5F /* DatabaseManager.swift in Sources */,
 				9064ABEF2A826BE400F53F5F /* SplashViewController.swift in Sources */,
+				9064AC222A828B2300F53F5F /* ImageHelper.swift in Sources */,
 				9064AC162A82761D00F53F5F /* LoginCoordinatorAssembler.swift in Sources */,
 				9064ABD32A82661100F53F5F /* BaseView.swift in Sources */,
 				9064ABED2A826BB400F53F5F /* SplashViewModel.swift in Sources */,
@@ -524,9 +574,11 @@
 				9064ABD72A82669200F53F5F /* GenericBaseView.swift in Sources */,
 				9064AC062A82711000F53F5F /* AuthenticationManager.swift in Sources */,
 				9064AC142A8274D100F53F5F /* LoginCoordinator.swift in Sources */,
+				9064AC1F2A82844000F53F5F /* Colors.swift in Sources */,
 				9064AC032A826E3C00F53F5F /* SplashCoordinatorAssembler.swift in Sources */,
 				9064AC0C2A8271C600F53F5F /* DatabaseKeys.swift in Sources */,
 				9064ABE02A82670700F53F5F /* BaseCoordinator.swift in Sources */,
+				9064AC1A2A82829400F53F5F /* CustomTextFieldData.swift in Sources */,
 				9064ABDB2A8266BF00F53F5F /* BaseViewModelDelegate.swift in Sources */,
 				9064ABDD2A8266DF00F53F5F /* GenericValueProtocol.swift in Sources */,
 				9064ABF72A826CE100F53F5F /* ViewControllerUtils.swift in Sources */,

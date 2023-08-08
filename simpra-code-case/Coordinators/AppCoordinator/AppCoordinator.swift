@@ -17,7 +17,6 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
 
     private lazy var commonApplicationLauncher: BooleanCompletionBlock = { [weak self] completed in
         if completed {
-            //self?.launchApplication()
             self?.launchMainProcess()
         }
     }
@@ -27,13 +26,13 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
         loadSplashScreen()
     }
     
-    private func launchApplication() {
-        launchMainProcess()
-    }
-    
     // MARK: - Main Screens Implementations -
     private func launchMainProcess() {
         removeChildCoordinators()
+        guard let coordinator = assemblerResolver.resolve(LoginCoordinator.self) else { return }
+        start(coordinator: coordinator)
+        
+        ViewControllerUtils.setRootViewController(window: window, viewController: coordinator.navigationController, withAnimation: false)
     }
     
     // MARK: - Splash Screen Implemententations -
@@ -46,9 +45,4 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
         
         ViewControllerUtils.setRootViewController(window: window, viewController: coordinator.viewContoller, withAnimation: true)
     }
-    
-    private func registerTutorialObservers() {
-        
-    }
-    
 }

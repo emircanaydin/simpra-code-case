@@ -35,7 +35,8 @@ class SplashScreenViewModel: BaseViewModelDelegate {
     }
     
     func fireSplashProcessFinish() {
-        print("FİNİSH")
-        splashFinalize.accept(true)
+        DispatchQueue.main.async {
+            self.splashFinalize.accept(true)
+        }
     }
 }

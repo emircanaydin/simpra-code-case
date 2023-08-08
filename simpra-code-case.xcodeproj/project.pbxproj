@@ -34,6 +34,10 @@
 		9064AC062A82711000F53F5F /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC052A82711000F53F5F /* AuthenticationManager.swift */; };
 		9064AC092A82713800F53F5F /* SavedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC082A82713800F53F5F /* SavedArray.swift */; };
 		9064AC0C2A8271C600F53F5F /* DatabaseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC0B2A8271C600F53F5F /* DatabaseKeys.swift */; };
+		9064AC102A82748D00F53F5F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC0F2A82748D00F53F5F /* LoginViewModel.swift */; };
+		9064AC122A8274B700F53F5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC112A8274B700F53F5F /* LoginViewController.swift */; };
+		9064AC142A8274D100F53F5F /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC132A8274D100F53F5F /* LoginCoordinator.swift */; };
+		9064AC162A82761D00F53F5F /* LoginCoordinatorAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC152A82761D00F53F5F /* LoginCoordinatorAssembler.swift */; };
 		906B857F2A8263F600DFBB99 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 906B857E2A8263F600DFBB99 /* Realm */; };
 		906B85812A8263F600DFBB99 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85802A8263F600DFBB99 /* RealmSwift */; };
 		906B85842A82640B00DFBB99 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85832A82640B00DFBB99 /* SwinjectAutoregistration */; };
@@ -92,6 +96,10 @@
 		9064AC052A82711000F53F5F /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		9064AC082A82713800F53F5F /* SavedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedArray.swift; sourceTree = "<group>"; };
 		9064AC0B2A8271C600F53F5F /* DatabaseKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseKeys.swift; sourceTree = "<group>"; };
+		9064AC0F2A82748D00F53F5F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9064AC112A8274B700F53F5F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9064AC132A8274D100F53F5F /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		9064AC152A82761D00F53F5F /* LoginCoordinatorAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorAssembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				9064ABF02A826C5300F53F5F /* AppCoordinator */,
+				9064AC0D2A82747500F53F5F /* LoginCoordinator */,
 				9064ABEB2A826B9E00F53F5F /* SplashCoordinator */,
 			);
 			path = Coordinators;
@@ -257,9 +266,9 @@
 		9064ABEB2A826B9E00F53F5F /* SplashCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				9064ABEC2A826BB400F53F5F /* SplashViewModel.swift */,
-				9064ABEE2A826BE400F53F5F /* SplashViewController.swift */,
 				9064ABF82A826D0000F53F5F /* SplashCoordinator.swift */,
+				9064ABEE2A826BE400F53F5F /* SplashViewController.swift */,
+				9064ABEC2A826BB400F53F5F /* SplashViewModel.swift */,
 			);
 			path = SplashCoordinator;
 			sourceTree = "<group>";
@@ -311,6 +320,7 @@
 			children = (
 				9064AC002A826E2700F53F5F /* AppCoordinatorAssembler.swift */,
 				9064AC022A826E3C00F53F5F /* SplashCoordinatorAssembler.swift */,
+				9064AC152A82761D00F53F5F /* LoginCoordinatorAssembler.swift */,
 			);
 			path = Assemblers;
 			sourceTree = "<group>";
@@ -337,6 +347,16 @@
 				9064AC0B2A8271C600F53F5F /* DatabaseKeys.swift */,
 			);
 			path = AppConstants;
+			sourceTree = "<group>";
+		};
+		9064AC0D2A82747500F53F5F /* LoginCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9064AC132A8274D100F53F5F /* LoginCoordinator.swift */,
+				9064AC112A8274B700F53F5F /* LoginViewController.swift */,
+				9064AC0F2A82748D00F53F5F /* LoginViewModel.swift */,
+			);
+			path = LoginCoordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,6 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9064AC102A82748D00F53F5F /* LoginViewModel.swift in Sources */,
 				9064ABE22A82671E00F53F5F /* Coordinator.swift in Sources */,
 				9064ABF92A826D0000F53F5F /* SplashCoordinator.swift in Sources */,
 				90577C5F2A825F3400B8CE6C /* AppDelegate.swift in Sources */,
@@ -494,12 +515,15 @@
 				9064AC012A826E2700F53F5F /* AppCoordinatorAssembler.swift in Sources */,
 				9064ABE92A8268C600F53F5F /* DatabaseManager.swift in Sources */,
 				9064ABEF2A826BE400F53F5F /* SplashViewController.swift in Sources */,
+				9064AC162A82761D00F53F5F /* LoginCoordinatorAssembler.swift in Sources */,
 				9064ABD32A82661100F53F5F /* BaseView.swift in Sources */,
 				9064ABED2A826BB400F53F5F /* SplashViewModel.swift in Sources */,
+				9064AC122A8274B700F53F5F /* LoginViewController.swift in Sources */,
 				9064ABE62A82677700F53F5F /* Assembler+Extensions.swift in Sources */,
 				9064ABD52A82662D00F53F5F /* BaseViewController.swift in Sources */,
 				9064ABD72A82669200F53F5F /* GenericBaseView.swift in Sources */,
 				9064AC062A82711000F53F5F /* AuthenticationManager.swift in Sources */,
+				9064AC142A8274D100F53F5F /* LoginCoordinator.swift in Sources */,
 				9064AC032A826E3C00F53F5F /* SplashCoordinatorAssembler.swift in Sources */,
 				9064AC0C2A8271C600F53F5F /* DatabaseKeys.swift in Sources */,
 				9064ABE02A82670700F53F5F /* BaseCoordinator.swift in Sources */,

@@ -12,7 +12,8 @@ extension Assembler {
     static let sharedAssembler: Assembler = {
         let container = Container()
         let assembler = Assembler([AppCoordinatorAssembler(),
-                                   SplashViewAssembler()],
+                                   SplashViewAssembler(),
+                                   LoginCoordinatorAssembler()],
                                   container: container)
         return assembler
     }()

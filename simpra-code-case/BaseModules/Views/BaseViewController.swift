@@ -21,8 +21,8 @@ class BaseViewController<T: BaseViewModelDelegate>: UIViewController {
         return String(describing: self)
     }
     
-    private func setViewControllerName() {
-        title = viewTitle
+    func prepareViewControllerConfigurations() {
+        
     }
     
     private lazy var activityIndicator: UIActivityIndicatorView = {

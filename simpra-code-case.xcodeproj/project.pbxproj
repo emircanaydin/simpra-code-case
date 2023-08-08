@@ -22,6 +22,18 @@
 		9064ABE22A82671E00F53F5F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABE12A82671E00F53F5F /* Coordinator.swift */; };
 		9064ABE62A82677700F53F5F /* Assembler+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABE52A82677700F53F5F /* Assembler+Extensions.swift */; };
 		9064ABE92A8268C600F53F5F /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABE82A8268C600F53F5F /* DatabaseManager.swift */; };
+		9064ABED2A826BB400F53F5F /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABEC2A826BB400F53F5F /* SplashViewModel.swift */; };
+		9064ABEF2A826BE400F53F5F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABEE2A826BE400F53F5F /* SplashViewController.swift */; };
+		9064ABF22A826C6600F53F5F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABF12A826C6600F53F5F /* AppCoordinator.swift */; };
+		9064ABF42A826C7300F53F5F /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABF32A826C7300F53F5F /* AppViewModel.swift */; };
+		9064ABF72A826CE100F53F5F /* ViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABF62A826CE100F53F5F /* ViewControllerUtils.swift */; };
+		9064ABF92A826D0000F53F5F /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABF82A826D0000F53F5F /* SplashCoordinator.swift */; };
+		9064ABFE2A826E0E00F53F5F /* AssemblerResolverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABFD2A826E0E00F53F5F /* AssemblerResolverDelegate.swift */; };
+		9064AC012A826E2700F53F5F /* AppCoordinatorAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC002A826E2700F53F5F /* AppCoordinatorAssembler.swift */; };
+		9064AC032A826E3C00F53F5F /* SplashCoordinatorAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC022A826E3C00F53F5F /* SplashCoordinatorAssembler.swift */; };
+		9064AC062A82711000F53F5F /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC052A82711000F53F5F /* AuthenticationManager.swift */; };
+		9064AC092A82713800F53F5F /* SavedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC082A82713800F53F5F /* SavedArray.swift */; };
+		9064AC0C2A8271C600F53F5F /* DatabaseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC0B2A8271C600F53F5F /* DatabaseKeys.swift */; };
 		906B857F2A8263F600DFBB99 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 906B857E2A8263F600DFBB99 /* Realm */; };
 		906B85812A8263F600DFBB99 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85802A8263F600DFBB99 /* RealmSwift */; };
 		906B85842A82640B00DFBB99 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85832A82640B00DFBB99 /* SwinjectAutoregistration */; };
@@ -68,6 +80,18 @@
 		9064ABE12A82671E00F53F5F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		9064ABE52A82677700F53F5F /* Assembler+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembler+Extensions.swift"; sourceTree = "<group>"; };
 		9064ABE82A8268C600F53F5F /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		9064ABEC2A826BB400F53F5F /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		9064ABEE2A826BE400F53F5F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		9064ABF12A826C6600F53F5F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		9064ABF32A826C7300F53F5F /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		9064ABF62A826CE100F53F5F /* ViewControllerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUtils.swift; sourceTree = "<group>"; };
+		9064ABF82A826D0000F53F5F /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		9064ABFD2A826E0E00F53F5F /* AssemblerResolverDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerResolverDelegate.swift; sourceTree = "<group>"; };
+		9064AC002A826E2700F53F5F /* AppCoordinatorAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorAssembler.swift; sourceTree = "<group>"; };
+		9064AC022A826E3C00F53F5F /* SplashCoordinatorAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinatorAssembler.swift; sourceTree = "<group>"; };
+		9064AC052A82711000F53F5F /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		9064AC082A82713800F53F5F /* SavedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedArray.swift; sourceTree = "<group>"; };
+		9064AC0B2A8271C600F53F5F /* DatabaseKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +150,9 @@
 			isa = PBXGroup;
 			children = (
 				9064ABCE2A8265F100F53F5F /* BaseModules */,
+				9064AC072A82712900F53F5F /* Models */,
 				9064ABE72A8268B000F53F5F /* Managers */,
+				9064ABEA2A826B8300F53F5F /* Coordinators */,
 				9064ABE32A82676500F53F5F /* Utilities */,
 				90577C5E2A825F3400B8CE6C /* AppDelegate.swift */,
 				90577C672A825F3500B8CE6C /* Assets.xcassets */,
@@ -194,7 +220,9 @@
 		9064ABE32A82676500F53F5F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				9064AC0A2A8271BC00F53F5F /* AppConstants */,
 				9064ABE42A82676B00F53F5F /* Extensions */,
+				9064ABF52A826CCE00F53F5F /* ViewControllerUtils */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -210,9 +238,105 @@
 		9064ABE72A8268B000F53F5F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				9064ABE82A8268C600F53F5F /* DatabaseManager.swift */,
+				9064AC042A82710600F53F5F /* AuthenticationManager */,
+				9064ABFA2A826DEC00F53F5F /* DatabaseManager */,
+				9064ABFB2A826DF200F53F5F /* DependencyManager */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		9064ABEA2A826B8300F53F5F /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABF02A826C5300F53F5F /* AppCoordinator */,
+				9064ABEB2A826B9E00F53F5F /* SplashCoordinator */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		9064ABEB2A826B9E00F53F5F /* SplashCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABEC2A826BB400F53F5F /* SplashViewModel.swift */,
+				9064ABEE2A826BE400F53F5F /* SplashViewController.swift */,
+				9064ABF82A826D0000F53F5F /* SplashCoordinator.swift */,
+			);
+			path = SplashCoordinator;
+			sourceTree = "<group>";
+		};
+		9064ABF02A826C5300F53F5F /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABF12A826C6600F53F5F /* AppCoordinator.swift */,
+				9064ABF32A826C7300F53F5F /* AppViewModel.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		9064ABF52A826CCE00F53F5F /* ViewControllerUtils */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABF62A826CE100F53F5F /* ViewControllerUtils.swift */,
+			);
+			path = ViewControllerUtils;
+			sourceTree = "<group>";
+		};
+		9064ABFA2A826DEC00F53F5F /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABE82A8268C600F53F5F /* DatabaseManager.swift */,
+			);
+			path = DatabaseManager;
+			sourceTree = "<group>";
+		};
+		9064ABFB2A826DF200F53F5F /* DependencyManager */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABFC2A826E0700F53F5F /* Protocols */,
+				9064ABFF2A826E1800F53F5F /* Assemblers */,
+			);
+			path = DependencyManager;
+			sourceTree = "<group>";
+		};
+		9064ABFC2A826E0700F53F5F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABFD2A826E0E00F53F5F /* AssemblerResolverDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9064ABFF2A826E1800F53F5F /* Assemblers */ = {
+			isa = PBXGroup;
+			children = (
+				9064AC002A826E2700F53F5F /* AppCoordinatorAssembler.swift */,
+				9064AC022A826E3C00F53F5F /* SplashCoordinatorAssembler.swift */,
+			);
+			path = Assemblers;
+			sourceTree = "<group>";
+		};
+		9064AC042A82710600F53F5F /* AuthenticationManager */ = {
+			isa = PBXGroup;
+			children = (
+				9064AC052A82711000F53F5F /* AuthenticationManager.swift */,
+			);
+			path = AuthenticationManager;
+			sourceTree = "<group>";
+		};
+		9064AC072A82712900F53F5F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9064AC082A82713800F53F5F /* SavedArray.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9064AC0A2A8271BC00F53F5F /* AppConstants */ = {
+			isa = PBXGroup;
+			children = (
+				9064AC0B2A8271C600F53F5F /* DatabaseKeys.swift */,
+			);
+			path = AppConstants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,15 +486,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				9064ABE22A82671E00F53F5F /* Coordinator.swift in Sources */,
+				9064ABF92A826D0000F53F5F /* SplashCoordinator.swift in Sources */,
 				90577C5F2A825F3400B8CE6C /* AppDelegate.swift in Sources */,
+				9064ABF42A826C7300F53F5F /* AppViewModel.swift in Sources */,
+				9064AC092A82713800F53F5F /* SavedArray.swift in Sources */,
+				9064ABF22A826C6600F53F5F /* AppCoordinator.swift in Sources */,
+				9064AC012A826E2700F53F5F /* AppCoordinatorAssembler.swift in Sources */,
 				9064ABE92A8268C600F53F5F /* DatabaseManager.swift in Sources */,
+				9064ABEF2A826BE400F53F5F /* SplashViewController.swift in Sources */,
 				9064ABD32A82661100F53F5F /* BaseView.swift in Sources */,
+				9064ABED2A826BB400F53F5F /* SplashViewModel.swift in Sources */,
 				9064ABE62A82677700F53F5F /* Assembler+Extensions.swift in Sources */,
 				9064ABD52A82662D00F53F5F /* BaseViewController.swift in Sources */,
 				9064ABD72A82669200F53F5F /* GenericBaseView.swift in Sources */,
+				9064AC062A82711000F53F5F /* AuthenticationManager.swift in Sources */,
+				9064AC032A826E3C00F53F5F /* SplashCoordinatorAssembler.swift in Sources */,
+				9064AC0C2A8271C600F53F5F /* DatabaseKeys.swift in Sources */,
 				9064ABE02A82670700F53F5F /* BaseCoordinator.swift in Sources */,
 				9064ABDB2A8266BF00F53F5F /* BaseViewModelDelegate.swift in Sources */,
 				9064ABDD2A8266DF00F53F5F /* GenericValueProtocol.swift in Sources */,
+				9064ABF72A826CE100F53F5F /* ViewControllerUtils.swift in Sources */,
+				9064ABFE2A826E0E00F53F5F /* AssemblerResolverDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

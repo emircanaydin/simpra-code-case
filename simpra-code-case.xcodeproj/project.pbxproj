@@ -13,6 +13,14 @@
 		90577C762A825F3500B8CE6C /* simpra_code_caseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90577C752A825F3500B8CE6C /* simpra_code_caseTests.swift */; };
 		90577C802A825F3500B8CE6C /* simpra_code_caseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90577C7F2A825F3500B8CE6C /* simpra_code_caseUITests.swift */; };
 		90577C822A825F3500B8CE6C /* simpra_code_caseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90577C812A825F3500B8CE6C /* simpra_code_caseUITestsLaunchTests.swift */; };
+		9064ABD32A82661100F53F5F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABD22A82661100F53F5F /* BaseView.swift */; };
+		9064ABD52A82662D00F53F5F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABD42A82662D00F53F5F /* BaseViewController.swift */; };
+		9064ABD72A82669200F53F5F /* GenericBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABD62A82669200F53F5F /* GenericBaseView.swift */; };
+		9064ABDB2A8266BF00F53F5F /* BaseViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABDA2A8266BF00F53F5F /* BaseViewModelDelegate.swift */; };
+		9064ABDD2A8266DF00F53F5F /* GenericValueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABDC2A8266DF00F53F5F /* GenericValueProtocol.swift */; };
+		9064ABE02A82670700F53F5F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABDF2A82670700F53F5F /* BaseCoordinator.swift */; };
+		9064ABE22A82671E00F53F5F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABE12A82671E00F53F5F /* Coordinator.swift */; };
+		9064ABE62A82677700F53F5F /* Assembler+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABE52A82677700F53F5F /* Assembler+Extensions.swift */; };
 		906B857F2A8263F600DFBB99 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 906B857E2A8263F600DFBB99 /* Realm */; };
 		906B85812A8263F600DFBB99 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85802A8263F600DFBB99 /* RealmSwift */; };
 		906B85842A82640B00DFBB99 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85832A82640B00DFBB99 /* SwinjectAutoregistration */; };
@@ -50,6 +58,14 @@
 		90577C7B2A825F3500B8CE6C /* simpra-code-caseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "simpra-code-caseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90577C7F2A825F3500B8CE6C /* simpra_code_caseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpra_code_caseUITests.swift; sourceTree = "<group>"; };
 		90577C812A825F3500B8CE6C /* simpra_code_caseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpra_code_caseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9064ABD22A82661100F53F5F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		9064ABD42A82662D00F53F5F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9064ABD62A82669200F53F5F /* GenericBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBaseView.swift; sourceTree = "<group>"; };
+		9064ABDA2A8266BF00F53F5F /* BaseViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelDelegate.swift; sourceTree = "<group>"; };
+		9064ABDC2A8266DF00F53F5F /* GenericValueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericValueProtocol.swift; sourceTree = "<group>"; };
+		9064ABDF2A82670700F53F5F /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		9064ABE12A82671E00F53F5F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9064ABE52A82677700F53F5F /* Assembler+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembler+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +123,8 @@
 		90577C5D2A825F3400B8CE6C /* simpra-code-case */ = {
 			isa = PBXGroup;
 			children = (
+				9064ABCE2A8265F100F53F5F /* BaseModules */,
+				9064ABE32A82676500F53F5F /* Utilities */,
 				90577C5E2A825F3400B8CE6C /* AppDelegate.swift */,
 				90577C672A825F3500B8CE6C /* Assets.xcassets */,
 				90577C692A825F3500B8CE6C /* LaunchScreen.storyboard */,
@@ -130,6 +148,60 @@
 				90577C812A825F3500B8CE6C /* simpra_code_caseUITestsLaunchTests.swift */,
 			);
 			path = "simpra-code-caseUITests";
+			sourceTree = "<group>";
+		};
+		9064ABCE2A8265F100F53F5F /* BaseModules */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABDE2A8266FF00F53F5F /* Coordinator */,
+				9064ABD82A8266A900F53F5F /* Views */,
+				9064ABD92A8266AF00F53F5F /* Protocols */,
+			);
+			path = BaseModules;
+			sourceTree = "<group>";
+		};
+		9064ABD82A8266A900F53F5F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABD22A82661100F53F5F /* BaseView.swift */,
+				9064ABD42A82662D00F53F5F /* BaseViewController.swift */,
+				9064ABD62A82669200F53F5F /* GenericBaseView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9064ABD92A8266AF00F53F5F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABDA2A8266BF00F53F5F /* BaseViewModelDelegate.swift */,
+				9064ABDC2A8266DF00F53F5F /* GenericValueProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9064ABDE2A8266FF00F53F5F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABDF2A82670700F53F5F /* BaseCoordinator.swift */,
+				9064ABE12A82671E00F53F5F /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9064ABE32A82676500F53F5F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABE42A82676B00F53F5F /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9064ABE42A82676B00F53F5F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9064ABE52A82677700F53F5F /* Assembler+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +350,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9064ABE22A82671E00F53F5F /* Coordinator.swift in Sources */,
 				90577C5F2A825F3400B8CE6C /* AppDelegate.swift in Sources */,
+				9064ABD32A82661100F53F5F /* BaseView.swift in Sources */,
+				9064ABE62A82677700F53F5F /* Assembler+Extensions.swift in Sources */,
+				9064ABD52A82662D00F53F5F /* BaseViewController.swift in Sources */,
+				9064ABD72A82669200F53F5F /* GenericBaseView.swift in Sources */,
+				9064ABE02A82670700F53F5F /* BaseCoordinator.swift in Sources */,
+				9064ABDB2A8266BF00F53F5F /* BaseViewModelDelegate.swift in Sources */,
+				9064ABDD2A8266DF00F53F5F /* GenericValueProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

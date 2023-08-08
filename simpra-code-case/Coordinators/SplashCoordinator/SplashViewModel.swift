@@ -19,7 +19,7 @@ class SplashScreenViewModel: BaseViewModelDelegate {
     /// Description: This module could be used to get app configuration files,
     /// app initialize process or application session management etc
     func startSplashProcess() {
-        if !AuthenticationManager().checkLoginDataIsExists() {
+        if !AuthenticationManager.checkLoginDataIsExists() {
             // I resorted to this approach because usernames were provided as mock data.
             let dataArray = ["9nd54", "v542w", "17pcy0", "gbf48", "zdah4"]
             let loginData = SavedArray()

@@ -13,7 +13,9 @@ extension Assembler {
         let container = Container()
         let assembler = Assembler([AppCoordinatorAssembler(),
                                    SplashViewAssembler(),
-                                   LoginCoordinatorAssembler()],
+                                   LoginCoordinatorAssembler(),
+                                   AuthenticationAssembler(),
+                                   NetworkAssembler()],
                                   container: container)
         return assembler
     }()

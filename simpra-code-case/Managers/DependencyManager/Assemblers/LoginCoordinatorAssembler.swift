@@ -13,5 +13,8 @@ class LoginCoordinatorAssembler: Assembly {
     func assemble(container: Container) {
         container.autoregister(LoginCoordinator.self, initializer: LoginCoordinator.init).inObjectScope(.weak)
         container.autoregister(LoginViewModel.self, initializer: LoginViewModel.init).inObjectScope(.weak)
+        
+        container.autoregister(LoginCallback.self, initializer: LoginCallback.init).inObjectScope(.transient)
+        container.autoregister(LoginUseCase.self, initializer: LoginUseCase.init).inObjectScope(.transient)
     }
 }

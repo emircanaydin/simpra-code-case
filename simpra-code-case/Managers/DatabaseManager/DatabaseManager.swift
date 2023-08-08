@@ -50,6 +50,10 @@ class DatabaseManager {
         }
     }
     
+    func getObject<T: Object> (_ type: T.Type, key: String) -> T? {
+        return realm.object(ofType: type, forPrimaryKey: key)
+    }
+    
     func getAllObjects<T: Object>(_ type: T.Type) -> Results<T> {
         return realm.objects(type)
     }

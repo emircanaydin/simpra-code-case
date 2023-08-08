@@ -11,5 +11,9 @@ import RxCocoa
 
 class LoginViewModel: BaseViewModelDelegate {
     var dismissInformer: PublishSubject<Void>?
+    var username: String = ""
     
+    func login() {
+        print("\(username)")
+    }
 }

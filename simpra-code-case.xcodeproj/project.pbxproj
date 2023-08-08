@@ -50,6 +50,9 @@
 		9064AC432A82A62600F53F5F /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC422A82A62600F53F5F /* FontManager.swift */; };
 		9064AC472A82AACE00F53F5F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9064AC492A82AACE00F53F5F /* Localizable.strings */; };
 		9064AC4D2A82AB2700F53F5F /* Localizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC4C2A82AB2700F53F5F /* Localizables.swift */; };
+		9064AC502A82C3EE00F53F5F /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC4F2A82C3EE00F53F5F /* ActionButton.swift */; };
+		9064AC522A82C40000F53F5F /* ActionButtonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC512A82C40000F53F5F /* ActionButtonData.swift */; };
+		9064AC542A82C50C00F53F5F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC532A82C50C00F53F5F /* UIView+Extensions.swift */; };
 		906B857F2A8263F600DFBB99 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 906B857E2A8263F600DFBB99 /* Realm */; };
 		906B85812A8263F600DFBB99 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85802A8263F600DFBB99 /* RealmSwift */; };
 		906B85842A82640B00DFBB99 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85832A82640B00DFBB99 /* SwinjectAutoregistration */; };
@@ -123,6 +126,9 @@
 		9064AC422A82A62600F53F5F /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		9064AC482A82AACE00F53F5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9064AC4C2A82AB2700F53F5F /* Localizables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizables.swift; sourceTree = "<group>"; };
+		9064AC4F2A82C3EE00F53F5F /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		9064AC512A82C40000F53F5F /* ActionButtonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonData.swift; sourceTree = "<group>"; };
+		9064AC532A82C50C00F53F5F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				9064ABE52A82677700F53F5F /* Assembler+Extensions.swift */,
+				9064AC532A82C50C00F53F5F /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -391,6 +398,7 @@
 		9064AC172A82827200F53F5F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9064AC4E2A82C3E600F53F5F /* ActionButton */,
 				9064AC182A82827800F53F5F /* CustomTextField */,
 			);
 			path = Components;
@@ -456,6 +464,15 @@
 				9064AC4C2A82AB2700F53F5F /* Localizables.swift */,
 			);
 			path = LocalizeHelper;
+			sourceTree = "<group>";
+		};
+		9064AC4E2A82C3E600F53F5F /* ActionButton */ = {
+			isa = PBXGroup;
+			children = (
+				9064AC4F2A82C3EE00F53F5F /* ActionButton.swift */,
+				9064AC512A82C40000F53F5F /* ActionButtonData.swift */,
+			);
+			path = ActionButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -612,11 +629,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9064AC1C2A8282A000F53F5F /* CustomTextField.swift in Sources */,
+				9064AC522A82C40000F53F5F /* ActionButtonData.swift in Sources */,
 				9064AC102A82748D00F53F5F /* LoginViewModel.swift in Sources */,
 				9064AC4D2A82AB2700F53F5F /* Localizables.swift in Sources */,
 				9064ABE22A82671E00F53F5F /* Coordinator.swift in Sources */,
 				9064ABF92A826D0000F53F5F /* SplashCoordinator.swift in Sources */,
 				90577C5F2A825F3400B8CE6C /* AppDelegate.swift in Sources */,
+				9064AC542A82C50C00F53F5F /* UIView+Extensions.swift in Sources */,
 				9064ABF42A826C7300F53F5F /* AppViewModel.swift in Sources */,
 				9064AC092A82713800F53F5F /* SavedArray.swift in Sources */,
 				9064ABF22A826C6600F53F5F /* AppCoordinator.swift in Sources */,
@@ -625,6 +644,7 @@
 				9064ABEF2A826BE400F53F5F /* SplashViewController.swift in Sources */,
 				9064AC222A828B2300F53F5F /* ImageHelper.swift in Sources */,
 				9064AC162A82761D00F53F5F /* LoginCoordinatorAssembler.swift in Sources */,
+				9064AC502A82C3EE00F53F5F /* ActionButton.swift in Sources */,
 				9064ABD32A82661100F53F5F /* BaseView.swift in Sources */,
 				9064ABED2A826BB400F53F5F /* SplashViewModel.swift in Sources */,
 				9064AC122A8274B700F53F5F /* LoginViewController.swift in Sources */,

@@ -10,6 +10,7 @@ import SnapKit
 
 class LoginViewController: BaseViewController<LoginViewModel> {
     enum Const {
+        static let buttonHeight: CGFloat = 56.0
         static let horizontalPadding: CGFloat = 16.0
     }
     
@@ -34,7 +35,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     private lazy var headerTitle: UILabel = {
         let temp = UILabel()
         temp.font = FontManager.robotoBoldItalic(50).value
-        temp.textColor = Colors.defaultGray.value
+        temp.textColor = Colors.defaultWhite.value
         temp.text = Localizables.brandName.value
         return temp
     }()
@@ -49,15 +50,21 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     
     private lazy var passwordTextField: CustomTextField = {
         let temp = CustomTextField()
-        temp.translatesAutoresizingMaskIntoConstraints = false
         temp.textField.isSecureTextEntry = true
         temp.textField.placeholder = Localizables.password.value
+        return temp
+    }()
+    
+    private lazy var loginButton: ActionButton = {
+        let temp = ActionButton()
         return temp
     }()
     
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
         addComponents()
+        configureLoginButton()
+        configureUsernameField()
     }
     
     private func addComponents() {
@@ -67,6 +74,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
         
         self.view.addSubview(usernameTextField)
         self.view.addSubview(passwordTextField)
+        self.view.addSubview(loginButton)
         
         headerShadowView.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -90,8 +98,35 @@ class LoginViewController: BaseViewController<LoginViewModel> {
         
         passwordTextField.snp.makeConstraints { make in
             make.top.equalTo(usernameTextField.snp.bottom).offset(8)
-            make.horizontalEdges.equalToSuperview().offset(Const.horizontalPadding)
+            make.horizontalEdges.equalToSuperview().inset(Const.horizontalPadding)
         }
+        
+        loginButton.snp.makeConstraints { make in
+            make.top.equalTo(passwordTextField.snp.bottom).offset(20)
+            make.horizontalEdges.equalToSuperview().inset(Const.horizontalPadding)
+            make.height.equalTo(Const.buttonHeight)
+        }
+    }
+    
+    private func configureLoginButton() {
+        let loginButtonData = ActionButtonData(text: Localizables.login.value)
+        loginButtonData.setActionButtonListener(by: loginAction)
+        loginButton.setData(data: loginButtonData)
+    }
+    
+    private func configureUsernameField() {
+        let usernameField = CustomTextFieldData(textChangeListener: usernameFieldChangeListener)
+        usernameTextField.setData(data: usernameField)
+    }
+    
+    private lazy var loginAction: VoidCompletionBlock = { [weak self] in
+        guard let self = self else { return }
+        self.viewModel.login()
+    }
+    
+    private lazy var usernameFieldChangeListener: TextChangeBlock = { [weak self] text in
+        guard let self = self, let username = text else { return }
+        self.viewModel.username = username
     }
     
     private var headerHeight: CGFloat {

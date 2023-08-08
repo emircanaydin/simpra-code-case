@@ -17,6 +17,7 @@ enum Localizables: String, GenericValueProtocol {
     case brandName = "brand_name"
     case username = "username"
     case password = "password"
+    case login = "login"
 }
 
 extension String {

@@ -46,11 +46,6 @@ class CustomTextField: GenericBaseView<CustomTextFieldData> {
         textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
-    override func loadDataToView() {
-        guard let data = returnData() else { return }
-        textField.placeholder = data.placeHolder
-    }
-    
     //MARK: - Private Methods
     private func addUserInterfaceComponent() {
         addSubview(containerView)

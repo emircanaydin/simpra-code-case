@@ -31,6 +31,9 @@
 		9064ABFE2A826E0E00F53F5F /* AssemblerResolverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ABFD2A826E0E00F53F5F /* AssemblerResolverDelegate.swift */; };
 		9064AC012A826E2700F53F5F /* AppCoordinatorAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC002A826E2700F53F5F /* AppCoordinatorAssembler.swift */; };
 		9064AC032A826E3C00F53F5F /* SplashCoordinatorAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC022A826E3C00F53F5F /* SplashCoordinatorAssembler.swift */; };
+		9064AC062A82711000F53F5F /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC052A82711000F53F5F /* AuthenticationManager.swift */; };
+		9064AC092A82713800F53F5F /* SavedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC082A82713800F53F5F /* SavedArray.swift */; };
+		9064AC0C2A8271C600F53F5F /* DatabaseKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC0B2A8271C600F53F5F /* DatabaseKeys.swift */; };
 		906B857F2A8263F600DFBB99 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 906B857E2A8263F600DFBB99 /* Realm */; };
 		906B85812A8263F600DFBB99 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85802A8263F600DFBB99 /* RealmSwift */; };
 		906B85842A82640B00DFBB99 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85832A82640B00DFBB99 /* SwinjectAutoregistration */; };
@@ -86,6 +89,9 @@
 		9064ABFD2A826E0E00F53F5F /* AssemblerResolverDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblerResolverDelegate.swift; sourceTree = "<group>"; };
 		9064AC002A826E2700F53F5F /* AppCoordinatorAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorAssembler.swift; sourceTree = "<group>"; };
 		9064AC022A826E3C00F53F5F /* SplashCoordinatorAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinatorAssembler.swift; sourceTree = "<group>"; };
+		9064AC052A82711000F53F5F /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		9064AC082A82713800F53F5F /* SavedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedArray.swift; sourceTree = "<group>"; };
+		9064AC0B2A8271C600F53F5F /* DatabaseKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				9064ABCE2A8265F100F53F5F /* BaseModules */,
+				9064AC072A82712900F53F5F /* Models */,
 				9064ABE72A8268B000F53F5F /* Managers */,
 				9064ABEA2A826B8300F53F5F /* Coordinators */,
 				9064ABE32A82676500F53F5F /* Utilities */,
@@ -213,6 +220,7 @@
 		9064ABE32A82676500F53F5F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				9064AC0A2A8271BC00F53F5F /* AppConstants */,
 				9064ABE42A82676B00F53F5F /* Extensions */,
 				9064ABF52A826CCE00F53F5F /* ViewControllerUtils */,
 			);
@@ -230,6 +238,7 @@
 		9064ABE72A8268B000F53F5F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				9064AC042A82710600F53F5F /* AuthenticationManager */,
 				9064ABFA2A826DEC00F53F5F /* DatabaseManager */,
 				9064ABFB2A826DF200F53F5F /* DependencyManager */,
 			);
@@ -304,6 +313,30 @@
 				9064AC022A826E3C00F53F5F /* SplashCoordinatorAssembler.swift */,
 			);
 			path = Assemblers;
+			sourceTree = "<group>";
+		};
+		9064AC042A82710600F53F5F /* AuthenticationManager */ = {
+			isa = PBXGroup;
+			children = (
+				9064AC052A82711000F53F5F /* AuthenticationManager.swift */,
+			);
+			path = AuthenticationManager;
+			sourceTree = "<group>";
+		};
+		9064AC072A82712900F53F5F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9064AC082A82713800F53F5F /* SavedArray.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9064AC0A2A8271BC00F53F5F /* AppConstants */ = {
+			isa = PBXGroup;
+			children = (
+				9064AC0B2A8271C600F53F5F /* DatabaseKeys.swift */,
+			);
+			path = AppConstants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,6 +489,7 @@
 				9064ABF92A826D0000F53F5F /* SplashCoordinator.swift in Sources */,
 				90577C5F2A825F3400B8CE6C /* AppDelegate.swift in Sources */,
 				9064ABF42A826C7300F53F5F /* AppViewModel.swift in Sources */,
+				9064AC092A82713800F53F5F /* SavedArray.swift in Sources */,
 				9064ABF22A826C6600F53F5F /* AppCoordinator.swift in Sources */,
 				9064AC012A826E2700F53F5F /* AppCoordinatorAssembler.swift in Sources */,
 				9064ABE92A8268C600F53F5F /* DatabaseManager.swift in Sources */,
@@ -465,7 +499,9 @@
 				9064ABE62A82677700F53F5F /* Assembler+Extensions.swift in Sources */,
 				9064ABD52A82662D00F53F5F /* BaseViewController.swift in Sources */,
 				9064ABD72A82669200F53F5F /* GenericBaseView.swift in Sources */,
+				9064AC062A82711000F53F5F /* AuthenticationManager.swift in Sources */,
 				9064AC032A826E3C00F53F5F /* SplashCoordinatorAssembler.swift in Sources */,
+				9064AC0C2A8271C600F53F5F /* DatabaseKeys.swift in Sources */,
 				9064ABE02A82670700F53F5F /* BaseCoordinator.swift in Sources */,
 				9064ABDB2A8266BF00F53F5F /* BaseViewModelDelegate.swift in Sources */,
 				9064ABDD2A8266DF00F53F5F /* GenericValueProtocol.swift in Sources */,

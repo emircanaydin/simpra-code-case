@@ -19,9 +19,15 @@ class SplashScreenViewModel: BaseViewModelDelegate {
     /// Description: This module could be used to get app configuration files,
     /// app initialize process or application session management etc
     func startSplashProcess() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-            self?.fireSplashProcessFinish()
+        if !AuthenticationManager().checkLoginDataIsExists() {
+            // I resorted to this approach because usernames were provided as mock data.
+            let dataArray = ["9nd54", "v542w", "17pcy0", "gbf48", "zdah4"]
+            let loginData = SavedArray()
+            loginData.key = DatabaseKeys.LoginUsernamesKey
+            loginData.data.append(objectsIn: dataArray)
+            DatabaseManager.shared.addObject(loginData)
         }
+        fireSplashProcessFinish()
     }
     
     func subscribeSplashProcess(completion: @escaping BooleanCompletionBlock) -> Disposable {

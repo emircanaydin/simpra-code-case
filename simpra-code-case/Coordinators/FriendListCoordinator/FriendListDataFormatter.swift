@@ -25,8 +25,8 @@ class FriendListDataFormatter: FriendListDataFormatterProtocol {
         1
     }
     
-    func getNumbeOfItem(in section: Int) -> Int {
-        list.count
+    func getNumberOfItem(in section: Int) -> Int {
+        list.count + 1
     }
     
     func getCount() -> Int {
@@ -34,7 +34,7 @@ class FriendListDataFormatter: FriendListDataFormatterProtocol {
     }
     
     func refresh() {
-        paginationInfo.page = 0
+        paginationInfo.page = 1
         paginationInfo.refreshing = true
         list.removeAll()
     }

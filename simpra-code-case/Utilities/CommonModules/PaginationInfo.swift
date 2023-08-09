@@ -8,12 +8,12 @@
 import Foundation
 
 struct PaginationInfo {
-    var page: Int = 0
+    var page: Int = 1
     var fetching: Bool = false
     var refreshing: Bool = false
     
-    mutating func nextPage() -> Int {
+    mutating func nextPage() {
         fetching = true
-        return page + 1
+        page += 1
     }
 }

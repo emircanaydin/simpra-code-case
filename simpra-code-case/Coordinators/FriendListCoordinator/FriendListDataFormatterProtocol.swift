@@ -12,7 +12,7 @@ protocol FriendListDataFormatterProtocol {
     func getRawData(at index: Int) -> Friend
     func getData(at index: Int) -> FriendContentDisplayerViewData?
     func getNumberOfSection() -> Int
-    func getNumbeOfItem(in section: Int) -> Int
+    func getNumberOfItem(in section: Int) -> Int
     func getCount() -> Int
     func refresh()
     func setData(with response: FriendListResponse)

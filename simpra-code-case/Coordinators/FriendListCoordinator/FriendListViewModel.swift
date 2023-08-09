@@ -30,7 +30,7 @@ class FriendListViewModel: BaseViewModelDelegate {
     
     func getFriendList() {
         friendListCallBack.commonResult(completion: friendListResponseListener)
-        friendListUseCase.execute(useCaseCallBack: friendListCallBack, params: FriendListRequest(page: dataFormatter.paginationInfo.nextPage()))
+        friendListUseCase.execute(useCaseCallBack: friendListCallBack, params: FriendListRequest(page: dataFormatter.paginationInfo.page))
         
     }
     
@@ -38,7 +38,12 @@ class FriendListViewModel: BaseViewModelDelegate {
         collectionState = completion
     }
     
-    
+    func refreshData(with externalRefresh: Bool = false) {
+        dataFormatter.refresh()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.getFriendList()
+        }
+    }
     
     private lazy var friendListResponseListener: (Result<FriendListResponse, ErrorResponse>) -> Void = { [weak self ] result in
         guard let self = self else { return }
@@ -51,5 +56,36 @@ class FriendListViewModel: BaseViewModelDelegate {
             // TODO: Set data
             self.collectionState?(.done)
         }
+    }
+}
+
+extension FriendListViewModel: FriendListCollectionComponentDelegate {
+    func getNumberOfSection() -> Int {
+        dataFormatter.getNumberOfSection()
+    }
+    
+    func getItemCount(in section: Int) -> Int {
+        dataFormatter.getNumberOfItem(in: section)
+    }
+    
+    func getData(at index: Int) -> FriendContentDisplayerViewData? {
+        dataFormatter.getData(at: index)
+    }
+    
+    func getMoreData() {
+        dataFormatter.paginationInfo.nextPage()
+        getFriendList()
+    }
+    
+    func isLoadingCell(for index: Int) -> Bool {
+        index >= dataFormatter.getCount()
+    }
+    
+    func selectedItem(at index: Int) {
+        selectedItemBlock?(index)
+    }
+    
+    func refreshCollectionView() {
+        refreshData()
     }
 }

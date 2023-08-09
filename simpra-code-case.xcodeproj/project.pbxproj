@@ -90,6 +90,11 @@
 		9064ACBC2A83BD8000F53F5F /* FriendListDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ACBB2A83BD8000F53F5F /* FriendListDataRepository.swift */; };
 		9064ACBE2A83BDD600F53F5F /* FriendListDataApiRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ACBD2A83BDD600F53F5F /* FriendListDataApiRemote.swift */; };
 		9064ACC12A83BE7300F53F5F /* FriendListServiceAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ACC02A83BE7300F53F5F /* FriendListServiceAssembler.swift */; };
+		9064ACC32A83C1CE00F53F5F /* FriendListDataFormatterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ACC22A83C1CE00F53F5F /* FriendListDataFormatterProtocol.swift */; };
+		9064ACC62A83C1F200F53F5F /* PaginationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ACC52A83C1F200F53F5F /* PaginationInfo.swift */; };
+		9064ACC82A83C27200F53F5F /* FriendListDataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ACC72A83C27200F53F5F /* FriendListDataFormatter.swift */; };
+		9064ACCA2A83C34900F53F5F /* CollectionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ACC92A83C34900F53F5F /* CollectionState.swift */; };
+		9064ACCD2A83C54400F53F5F /* FriendContentDisplayerViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ACCC2A83C54400F53F5F /* FriendContentDisplayerViewData.swift */; };
 		906B857F2A8263F600DFBB99 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 906B857E2A8263F600DFBB99 /* Realm */; };
 		906B85812A8263F600DFBB99 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85802A8263F600DFBB99 /* RealmSwift */; };
 		906B85842A82640B00DFBB99 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85832A82640B00DFBB99 /* SwinjectAutoregistration */; };
@@ -203,6 +208,11 @@
 		9064ACBB2A83BD8000F53F5F /* FriendListDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListDataRepository.swift; sourceTree = "<group>"; };
 		9064ACBD2A83BDD600F53F5F /* FriendListDataApiRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListDataApiRemote.swift; sourceTree = "<group>"; };
 		9064ACC02A83BE7300F53F5F /* FriendListServiceAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListServiceAssembler.swift; sourceTree = "<group>"; };
+		9064ACC22A83C1CE00F53F5F /* FriendListDataFormatterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListDataFormatterProtocol.swift; sourceTree = "<group>"; };
+		9064ACC52A83C1F200F53F5F /* PaginationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationInfo.swift; sourceTree = "<group>"; };
+		9064ACC72A83C27200F53F5F /* FriendListDataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListDataFormatter.swift; sourceTree = "<group>"; };
+		9064ACC92A83C34900F53F5F /* CollectionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionState.swift; sourceTree = "<group>"; };
+		9064ACCC2A83C54400F53F5F /* FriendContentDisplayerViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendContentDisplayerViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				9064AC0A2A8271BC00F53F5F /* AppConstants */,
+				9064ACC42A83C1E900F53F5F /* CommonModules */,
 				9064AC1D2A82842F00F53F5F /* ColorHelper */,
 				9064AC202A828B1900F53F5F /* ImageHelper */,
 				9064AC4A2A82AB0800F53F5F /* LocalizeHelper */,
@@ -480,6 +491,7 @@
 		9064AC172A82827200F53F5F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9064ACCB2A83C53300F53F5F /* FriendContentDisplayer */,
 				9064AC4E2A82C3E600F53F5F /* ActionButton */,
 				9064AC182A82827800F53F5F /* CustomTextField */,
 			);
@@ -752,6 +764,8 @@
 				9064AC9C2A83B1FF00F53F5F /* FriendListCoordinator.swift */,
 				9064AC9A2A83B1BB00F53F5F /* FriendListViewController.swift */,
 				9064AC982A83B13200F53F5F /* FriendListViewModel.swift */,
+				9064ACC72A83C27200F53F5F /* FriendListDataFormatter.swift */,
+				9064ACC22A83C1CE00F53F5F /* FriendListDataFormatterProtocol.swift */,
 			);
 			path = FriendListCoordinator;
 			sourceTree = "<group>";
@@ -843,6 +857,23 @@
 				9064ACBD2A83BDD600F53F5F /* FriendListDataApiRemote.swift */,
 			);
 			path = ApiRemote;
+			sourceTree = "<group>";
+		};
+		9064ACC42A83C1E900F53F5F /* CommonModules */ = {
+			isa = PBXGroup;
+			children = (
+				9064ACC52A83C1F200F53F5F /* PaginationInfo.swift */,
+				9064ACC92A83C34900F53F5F /* CollectionState.swift */,
+			);
+			path = CommonModules;
+			sourceTree = "<group>";
+		};
+		9064ACCB2A83C53300F53F5F /* FriendContentDisplayer */ = {
+			isa = PBXGroup;
+			children = (
+				9064ACCC2A83C54400F53F5F /* FriendContentDisplayerViewData.swift */,
+			);
+			path = FriendContentDisplayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1013,22 +1044,26 @@
 				9064AC6D2A82CF3A00F53F5F /* BaseRepository.swift in Sources */,
 				9064AC862A82D2A700F53F5F /* LoginServiceProviderManagerProtocol.swift in Sources */,
 				90577C5F2A825F3400B8CE6C /* AppDelegate.swift in Sources */,
+				9064ACCD2A83C54400F53F5F /* FriendContentDisplayerViewData.swift in Sources */,
 				9064ACB72A83BC0900F53F5F /* FriendListServiceProvider.swift in Sources */,
 				9064AC702A82CF5C00F53F5F /* EndpointManager.swift in Sources */,
 				9064ACAB2A83B96900F53F5F /* FriendListRepositoryProtocol.swift in Sources */,
 				9064AC542A82C50C00F53F5F /* UIView+Extensions.swift in Sources */,
 				9064ABF42A826C7300F53F5F /* AppViewModel.swift in Sources */,
 				9064ACC12A83BE7300F53F5F /* FriendListServiceAssembler.swift in Sources */,
+				9064ACC82A83C27200F53F5F /* FriendListDataFormatter.swift in Sources */,
 				9064AC7B2A82D0F700F53F5F /* LoginReposityoryProtocol.swift in Sources */,
 				9064AC092A82713800F53F5F /* SavedArray.swift in Sources */,
 				9064AC992A83B13200F53F5F /* FriendListViewModel.swift in Sources */,
 				9064ABF22A826C6600F53F5F /* AppCoordinator.swift in Sources */,
 				9064AC012A826E2700F53F5F /* AppCoordinatorAssembler.swift in Sources */,
 				9064AC932A82ED7000F53F5F /* NetworkAssembler.swift in Sources */,
+				9064ACC32A83C1CE00F53F5F /* FriendListDataFormatterProtocol.swift in Sources */,
 				9064ABE92A8268C600F53F5F /* DatabaseManager.swift in Sources */,
 				9064ABEF2A826BE400F53F5F /* SplashViewController.swift in Sources */,
 				9064AC222A828B2300F53F5F /* ImageHelper.swift in Sources */,
 				9064AC162A82761D00F53F5F /* LoginCoordinatorAssembler.swift in Sources */,
+				9064ACCA2A83C34900F53F5F /* CollectionState.swift in Sources */,
 				9064ACBC2A83BD8000F53F5F /* FriendListDataRepository.swift in Sources */,
 				9064AC802A82D18500F53F5F /* LoginCallback.swift in Sources */,
 				9064AC502A82C3EE00F53F5F /* ActionButton.swift in Sources */,
@@ -1064,6 +1099,7 @@
 				9064AC1A2A82829400F53F5F /* CustomTextFieldData.swift in Sources */,
 				9064AC622A82CF0700F53F5F /* SingleUseCase.swift in Sources */,
 				9064ABDB2A8266BF00F53F5F /* BaseViewModelDelegate.swift in Sources */,
+				9064ACC62A83C1F200F53F5F /* PaginationInfo.swift in Sources */,
 				9064ABDD2A8266DF00F53F5F /* GenericValueProtocol.swift in Sources */,
 				9064ABF72A826CE100F53F5F /* ViewControllerUtils.swift in Sources */,
 				9064ABFE2A826E0E00F53F5F /* AssemblerResolverDelegate.swift in Sources */,

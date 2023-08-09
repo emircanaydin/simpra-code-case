@@ -7,6 +7,7 @@
 
 import Foundation
 import Swinject
+import SwinjectAutoregistration
 
 class AuthenticationAssembler: Assembly {
     func assemble(container: Container) {

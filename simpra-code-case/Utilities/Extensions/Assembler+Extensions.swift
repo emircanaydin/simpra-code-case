@@ -11,7 +11,11 @@ import Swinject
 extension Assembler {
     static let sharedAssembler: Assembler = {
         let container = Container()
-        let assembler = Assembler([],
+        let assembler = Assembler([AppCoordinatorAssembler(),
+                                   SplashViewAssembler(),
+                                   LoginCoordinatorAssembler(),
+                                   AuthenticationAssembler(),
+                                   NetworkAssembler()],
                                   container: container)
         return assembler
     }()

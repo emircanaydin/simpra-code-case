@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 class DatabaseManager {
-    let shared = DatabaseManager()
+    static let shared = DatabaseManager()
     private let realm: Realm
     
     init() {
@@ -50,7 +50,19 @@ class DatabaseManager {
         }
     }
     
+    func getObject<T: Object> (_ type: T.Type, key: String) -> T? {
+        return realm.object(ofType: type, forPrimaryKey: key)
+    }
+    
     func getAllObjects<T: Object>(_ type: T.Type) -> Results<T> {
         return realm.objects(type)
+    }
+    
+    func checkDataIsExists<T: Object>(key: String, type: T.Type) -> Bool {
+        guard let _ = realm.object(ofType: type, forPrimaryKey: key) else {
+            return false
+        }
+        
+        return true
     }
 }

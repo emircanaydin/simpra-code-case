@@ -12,12 +12,15 @@ class FriendListViewController: BaseViewController<FriendListViewModel> {
     
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
+        self.view.backgroundColor = Colors.lightGray.value
         addFriendListComponent()
         listenViewModelDataState()
+        
+        viewModel.getFriendList()
     }
     
     private func addFriendListComponent() {
-        friendListCollectionComponent = FriendListCollectionComponent(data: FriendListCollectionComponentData(isRefreshingSupported: true))
+        friendListCollectionComponent = FriendListCollectionComponent(data: FriendListCollectionComponentData(isRefreshingSupported: false))
         friendListCollectionComponent.setupDelegation(with: viewModel)
         
         view.addSubview(friendListCollectionComponent)

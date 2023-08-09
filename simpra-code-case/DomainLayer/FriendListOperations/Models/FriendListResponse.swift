@@ -9,12 +9,6 @@ import Foundation
 
 struct FriendListResponse: Codable {
     let results: [Friend]
-    let info: Info
-}
-
-// MARK: - Info
-struct Info: Codable {
-    let results, page: Int
 }
 
 struct Friend: Codable {
@@ -22,8 +16,8 @@ struct Friend: Codable {
     let name: Name
     let location: Location
     let email: String
-    let dob, registered: Dob
-    let phone, cell: String
+    let dob: Dob
+    let phone: String
     let picture: Picture
     let nat: String
 }
@@ -43,7 +37,6 @@ struct Picture: Codable {
 }
 
 struct Name: Codable {
-    let title: Title
     let first, last: String
 }
 
@@ -55,11 +48,4 @@ struct Dob: Codable {
 enum Gender: String, Codable {
     case female = "female"
     case male = "male"
-}
-
-enum Title: String, Codable {
-    case miss = "Miss"
-    case mr = "Mr"
-    case mrs = "Mrs"
-    case ms = "Ms"
 }

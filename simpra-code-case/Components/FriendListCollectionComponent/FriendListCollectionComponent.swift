@@ -17,7 +17,7 @@ class FriendListCollectionComponent: GenericBaseView<FriendListCollectionCompone
         layout.minimumInteritemSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collection.backgroundColor = .white
+        collection.backgroundColor = .clear
         collection.delegate = self
         collection.dataSource = self
         collection.keyboardDismissMode = .onDrag
@@ -111,7 +111,7 @@ extension FriendListCollectionComponent: UICollectionViewDelegate, UICollectionV
 extension FriendListCollectionComponent: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (UIScreen.main.bounds.width - 20)
-        return CGSize(width: width, height: 250)
+        return CGSize(width: width, height: 150)
     }
 }
 

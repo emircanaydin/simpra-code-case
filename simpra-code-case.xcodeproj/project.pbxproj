@@ -104,6 +104,11 @@
 		9064ACDE2A83C9C500F53F5F /* FriendContentDisplayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ACDD2A83C9C500F53F5F /* FriendContentDisplayerCollectionViewCell.swift */; };
 		9064ACE02A83C9E000F53F5F /* GenericCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ACDF2A83C9E000F53F5F /* GenericCollectionViewCell.swift */; };
 		9064ACE22A83CA4000F53F5F /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ACE12A83CA3F00F53F5F /* UICollectionView+Extensions.swift */; };
+		9064ACF12A83D06B00F53F5F /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064ACF02A83D06B00F53F5F /* ImageCacheManager.swift */; };
+		9064AD052A83D18100F53F5F /* LoadingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD042A83D18100F53F5F /* LoadingType.swift */; };
+		9064AD072A83D18E00F53F5F /* CustomImageViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD062A83D18E00F53F5F /* CustomImageViewComponent.swift */; };
+		9064AD092A83D1BB00F53F5F /* CustomImageViewComponentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD082A83D1BB00F53F5F /* CustomImageViewComponentContainer.swift */; };
+		9064AD0B2A83D1D800F53F5F /* CustomImageViewComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD0A2A83D1D800F53F5F /* CustomImageViewComponentData.swift */; };
 		906B857F2A8263F600DFBB99 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 906B857E2A8263F600DFBB99 /* Realm */; };
 		906B85812A8263F600DFBB99 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85802A8263F600DFBB99 /* RealmSwift */; };
 		906B85842A82640B00DFBB99 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85832A82640B00DFBB99 /* SwinjectAutoregistration */; };
@@ -231,6 +236,11 @@
 		9064ACDD2A83C9C500F53F5F /* FriendContentDisplayerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendContentDisplayerCollectionViewCell.swift; sourceTree = "<group>"; };
 		9064ACDF2A83C9E000F53F5F /* GenericCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCollectionViewCell.swift; sourceTree = "<group>"; };
 		9064ACE12A83CA3F00F53F5F /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		9064ACF02A83D06B00F53F5F /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		9064AD042A83D18100F53F5F /* LoadingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingType.swift; sourceTree = "<group>"; };
+		9064AD062A83D18E00F53F5F /* CustomImageViewComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageViewComponent.swift; sourceTree = "<group>"; };
+		9064AD082A83D1BB00F53F5F /* CustomImageViewComponentContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageViewComponentContainer.swift; sourceTree = "<group>"; };
+		9064AD0A2A83D1D800F53F5F /* CustomImageViewComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageViewComponentData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,6 +404,7 @@
 				9064AC042A82710600F53F5F /* AuthenticationManager */,
 				9064ABFA2A826DEC00F53F5F /* DatabaseManager */,
 				9064ABFB2A826DF200F53F5F /* DependencyManager */,
+				9064ACEF2A83D06100F53F5F /* ImageCacheManager */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -514,6 +525,7 @@
 			children = (
 				9064AC4E2A82C3E600F53F5F /* ActionButton */,
 				9064AC182A82827800F53F5F /* CustomTextField */,
+				9064ACFB2A83D0E100F53F5F /* CustomImageComponents */,
 				9064ACD52A83C92F00F53F5F /* LoadingCell */,
 				9064ACCB2A83C53300F53F5F /* FriendContentDisplayer */,
 				9064ACCE2A83C68700F53F5F /* FriendListCollectionComponent */,
@@ -927,6 +939,25 @@
 			path = CellComponents;
 			sourceTree = "<group>";
 		};
+		9064ACEF2A83D06100F53F5F /* ImageCacheManager */ = {
+			isa = PBXGroup;
+			children = (
+				9064ACF02A83D06B00F53F5F /* ImageCacheManager.swift */,
+			);
+			path = ImageCacheManager;
+			sourceTree = "<group>";
+		};
+		9064ACFB2A83D0E100F53F5F /* CustomImageComponents */ = {
+			isa = PBXGroup;
+			children = (
+				9064AD042A83D18100F53F5F /* LoadingType.swift */,
+				9064AD062A83D18E00F53F5F /* CustomImageViewComponent.swift */,
+				9064AD082A83D1BB00F53F5F /* CustomImageViewComponentContainer.swift */,
+				9064AD0A2A83D1D800F53F5F /* CustomImageViewComponentData.swift */,
+			);
+			path = CustomImageComponents;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1084,6 +1115,7 @@
 				9064AC1C2A8282A000F53F5F /* CustomTextField.swift in Sources */,
 				9064AC9F2A83B5D300F53F5F /* FriendListCoordinatorAssembler.swift in Sources */,
 				9064ACBE2A83BDD600F53F5F /* FriendListDataApiRemote.swift in Sources */,
+				9064AD052A83D18100F53F5F /* LoadingType.swift in Sources */,
 				9064ACDB2A83C99F00F53F5F /* FriendContentDisplayerView.swift in Sources */,
 				9064AC522A82C40000F53F5F /* ActionButtonData.swift in Sources */,
 				9064AC782A82D06700F53F5F /* LoginResponse.swift in Sources */,
@@ -1096,6 +1128,7 @@
 				9064ABE22A82671E00F53F5F /* Coordinator.swift in Sources */,
 				9064ABF92A826D0000F53F5F /* SplashCoordinator.swift in Sources */,
 				9064AC6D2A82CF3A00F53F5F /* BaseRepository.swift in Sources */,
+				9064AD092A83D1BB00F53F5F /* CustomImageViewComponentContainer.swift in Sources */,
 				9064AC862A82D2A700F53F5F /* LoginServiceProviderManagerProtocol.swift in Sources */,
 				9064ACD22A83C8E000F53F5F /* FriendListCollectionComponentData.swift in Sources */,
 				9064ACE02A83C9E000F53F5F /* GenericCollectionViewCell.swift in Sources */,
@@ -1115,6 +1148,7 @@
 				9064ABF22A826C6600F53F5F /* AppCoordinator.swift in Sources */,
 				9064AC012A826E2700F53F5F /* AppCoordinatorAssembler.swift in Sources */,
 				9064AC932A82ED7000F53F5F /* NetworkAssembler.swift in Sources */,
+				9064AD072A83D18E00F53F5F /* CustomImageViewComponent.swift in Sources */,
 				9064ACC32A83C1CE00F53F5F /* FriendListDataFormatterProtocol.swift in Sources */,
 				9064ABE92A8268C600F53F5F /* DatabaseManager.swift in Sources */,
 				9064ABEF2A826BE400F53F5F /* SplashViewController.swift in Sources */,
@@ -1139,6 +1173,7 @@
 				9064ACA52A83B8F900F53F5F /* FriendListRequest.swift in Sources */,
 				9064ABD52A82662D00F53F5F /* BaseViewController.swift in Sources */,
 				9064ABD72A82669200F53F5F /* GenericBaseView.swift in Sources */,
+				9064AD0B2A83D1D800F53F5F /* CustomImageViewComponentData.swift in Sources */,
 				9064AC652A82CF0700F53F5F /* UseCaseListener.swift in Sources */,
 				9064ACB22A83BA5400F53F5F /* FriendListDataApiRemoteProtocol.swift in Sources */,
 				9064AC062A82711000F53F5F /* AuthenticationManager.swift in Sources */,
@@ -1157,6 +1192,7 @@
 				9064AC612A82CF0700F53F5F /* BaseUseCaseProtocol.swift in Sources */,
 				9064AC1A2A82829400F53F5F /* CustomTextFieldData.swift in Sources */,
 				9064AC622A82CF0700F53F5F /* SingleUseCase.swift in Sources */,
+				9064ACF12A83D06B00F53F5F /* ImageCacheManager.swift in Sources */,
 				9064ABDB2A8266BF00F53F5F /* BaseViewModelDelegate.swift in Sources */,
 				9064ACC62A83C1F200F53F5F /* PaginationInfo.swift in Sources */,
 				9064ABDD2A8266DF00F53F5F /* GenericValueProtocol.swift in Sources */,

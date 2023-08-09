@@ -24,6 +24,8 @@ enum Colors: GenericValueProtocol {
             return #colorLiteral(red: 0.2392156863, green: 0.2509803922, blue: 0.262745098, alpha: 1)
         case .defaultWhite:
             return #colorLiteral(red: 0.9707725644, green: 0.9807206988, blue: 0.9891527295, alpha: 1)
+        case .lightGray:
+            return #colorLiteral(red: 0.9921568627, green: 0.9921568627, blue: 0.9921568627, alpha: 1)
         case .errorRed:
             return #colorLiteral(red: 1, green: 0.2, blue: 0.2, alpha: 1)
         }
@@ -35,5 +37,6 @@ enum Colors: GenericValueProtocol {
     case paleGray
     case defaultGray
     case defaultWhite
+    case lightGray
     case errorRed
 }

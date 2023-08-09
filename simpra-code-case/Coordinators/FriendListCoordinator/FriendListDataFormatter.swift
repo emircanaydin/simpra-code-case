@@ -18,7 +18,12 @@ class FriendListDataFormatter: FriendListDataFormatterProtocol {
     
     func getData(at index: Int) -> FriendContentDisplayerViewData? {
         guard index < list.count else { return nil }
-        return FriendContentDisplayerViewData()
+        let data = list[index]
+        return FriendContentDisplayerViewData(imageData: CustomImageViewComponentData(imageUrl: data.picture.thumbnail),
+                                              name: data.name,
+                                              email: data.email,
+                                              phone: data.phone,
+                                              location: data.location)
     }
     
     func getNumberOfSection() -> Int {
@@ -26,7 +31,7 @@ class FriendListDataFormatter: FriendListDataFormatterProtocol {
     }
     
     func getNumberOfItem(in section: Int) -> Int {
-        list.count + 1
+        return list.count > 0 ? list.count + 1 : 0
     }
     
     func getCount() -> Int {

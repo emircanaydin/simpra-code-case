@@ -9,5 +9,5 @@ import Foundation
 
 struct FriendListRequest: Codable {
     let page: Int
-    var result: Int = 20
+    var results: Int = 20
 }

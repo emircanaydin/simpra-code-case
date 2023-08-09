@@ -31,7 +31,6 @@ class FriendListViewModel: BaseViewModelDelegate {
     func getFriendList() {
         friendListCallBack.commonResult(completion: friendListResponseListener)
         friendListUseCase.execute(useCaseCallBack: friendListCallBack, params: FriendListRequest(page: dataFormatter.paginationInfo.page))
-        
     }
     
     func listenCollectionState(with completion: @escaping CollectionLoadingStateBlock) {
@@ -53,7 +52,7 @@ class FriendListViewModel: BaseViewModelDelegate {
         case .failure(let error):
             print("error")
         case .success(let response):
-            // TODO: Set data
+            self.dataFormatter.setData(with: response)
             self.collectionState?(.done)
         }
     }
@@ -78,7 +77,7 @@ extension FriendListViewModel: FriendListCollectionComponentDelegate {
     }
     
     func isLoadingCell(for index: Int) -> Bool {
-        index >= dataFormatter.getCount()
+        index >= dataFormatter.getCount() && dataFormatter.getCount() != 0
     }
     
     func selectedItem(at index: Int) {

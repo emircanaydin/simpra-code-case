@@ -10,6 +10,6 @@ import NetworkLayer
 
 class FriendListServiceProvider: ApiServiceProvider<FriendListRequest> {
     init(request: FriendListRequest) {
-        super.init(baseUrl: BaseUrls.dev.description, method: .get, path: Paths.friendList(request).description, isAuthRequested: false, data: nil)
+        super.init(baseUrl: BaseUrls.dev.description, method: .get, path: nil, isAuthRequested: false, data: request)
     }
 }

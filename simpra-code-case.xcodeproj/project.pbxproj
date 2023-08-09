@@ -77,6 +77,7 @@
 		9064AC992A83B13200F53F5F /* FriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC982A83B13200F53F5F /* FriendListViewModel.swift */; };
 		9064AC9B2A83B1BB00F53F5F /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC9A2A83B1BB00F53F5F /* FriendListViewController.swift */; };
 		9064AC9D2A83B1FF00F53F5F /* FriendListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC9C2A83B1FF00F53F5F /* FriendListCoordinator.swift */; };
+		9064AC9F2A83B5D300F53F5F /* FriendListCoordinatorAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC9E2A83B5D300F53F5F /* FriendListCoordinatorAssembler.swift */; };
 		906B857F2A8263F600DFBB99 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 906B857E2A8263F600DFBB99 /* Realm */; };
 		906B85812A8263F600DFBB99 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85802A8263F600DFBB99 /* RealmSwift */; };
 		906B85842A82640B00DFBB99 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85832A82640B00DFBB99 /* SwinjectAutoregistration */; };
@@ -177,6 +178,7 @@
 		9064AC982A83B13200F53F5F /* FriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewModel.swift; sourceTree = "<group>"; };
 		9064AC9A2A83B1BB00F53F5F /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		9064AC9C2A83B1FF00F53F5F /* FriendListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCoordinator.swift; sourceTree = "<group>"; };
+		9064AC9E2A83B5D300F53F5F /* FriendListCoordinatorAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCoordinatorAssembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,6 +412,7 @@
 				9064AC022A826E3C00F53F5F /* SplashCoordinatorAssembler.swift */,
 				9064AC152A82761D00F53F5F /* LoginCoordinatorAssembler.swift */,
 				9064AC902A82EC3A00F53F5F /* AuthenticationAssembler.swift */,
+				9064AC9E2A83B5D300F53F5F /* FriendListCoordinatorAssembler.swift */,
 				9064AC922A82ED7000F53F5F /* NetworkAssembler.swift */,
 			);
 			path = Assemblers;
@@ -880,6 +883,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9064AC1C2A8282A000F53F5F /* CustomTextField.swift in Sources */,
+				9064AC9F2A83B5D300F53F5F /* FriendListCoordinatorAssembler.swift in Sources */,
 				9064AC522A82C40000F53F5F /* ActionButtonData.swift in Sources */,
 				9064AC782A82D06700F53F5F /* LoginResponse.swift in Sources */,
 				9064AC8C2A82D36600F53F5F /* LoginDataRepository.swift in Sources */,

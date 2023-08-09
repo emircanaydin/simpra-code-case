@@ -112,6 +112,8 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     private func listenLoginState() {
         viewModel.listenLoginState { state in
             switch state {
+            case .success:
+                self.viewModel.fireLoginProcessFinish()
             case .userNotFound:
                 self.usernameTextField.error(message: Localizables.userNotFound.value)
             case .usernameBlank:

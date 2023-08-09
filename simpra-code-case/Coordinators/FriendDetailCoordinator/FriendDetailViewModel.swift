@@ -11,7 +11,7 @@ import RxSwift
 class FriendDetailViewModel: BaseViewModelDelegate {
     var dismissInformer: PublishSubject<Void>?
     
-    private var friendData: Friend?
+    var friendData: Friend?
     
     func setupFriendData(with value: Friend) {
         self.friendData = value

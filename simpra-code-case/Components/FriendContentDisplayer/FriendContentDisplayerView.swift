@@ -8,13 +8,30 @@
 import UIKit
 
 class FriendContentDisplayerView: GenericBaseView<FriendContentDisplayerViewData> {
+    private lazy var shadowContainerView: UIView = {
+        let temp = UIView()
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.layer.shadowColor = UIColor.black.cgColor
+        temp.layer.shadowOffset = CGSize(width: 0, height: 2)
+        temp.layer.shadowRadius = 4
+        temp.layer.shadowOpacity = 0.4
+        temp.layer.cornerRadius = 16
+        return temp
+    }()
+    
+    private lazy var containerView: UIView = {
+        let temp = UIView()
+        temp.layer.cornerRadius = 16
+        temp.backgroundColor = .white
+        return temp
+    }()
+    
     private lazy var mainStackView: UIStackView = {
         let temp = UIStackView(arrangedSubviews: [imageContainerView, userInfoStackView])
         temp.axis = .horizontal
         temp.alignment = .top
         temp.distribution = .fill
         temp.spacing = 20
-        temp.layer.cornerRadius = 16
         return temp
     }()
     
@@ -92,8 +109,18 @@ class FriendContentDisplayerView: GenericBaseView<FriendContentDisplayerViewData
     }
     
     private func addComponents() {
-        addSubview(mainStackView)
+        addSubview(shadowContainerView)
+        shadowContainerView.addSubview(containerView)
+        containerView.addSubview(mainStackView)
         imageContainerView.addSubview(profileImage)
+        
+        shadowContainerView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+        containerView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
         
         mainStackView.snp.makeConstraints { make in
             make.edges.equalToSuperview().inset(10)

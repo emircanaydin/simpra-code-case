@@ -13,7 +13,7 @@ import NetworkEntityLayer
 typealias LoginStateBlock = (LoginState) -> Void
 
 enum LoginState {
-    case success
+    case success(LoginResponse)
     case passwordRequired
     case usernameBlank
     case userNotFound
@@ -22,6 +22,7 @@ enum LoginState {
 class LoginViewModel: BaseViewModelDelegate {
     var dismissInformer: PublishSubject<Void>?
     var username: String = ""
+    var password: String = ""
     
     private var loginState: LoginStateBlock?
     
@@ -39,7 +40,7 @@ class LoginViewModel: BaseViewModelDelegate {
         guard let self = self else { return }
         switch result {
         case .success(let response):
-            self.loginState?(.success)
+            self.loginState?(.success(response))
         case .failure(let error):
             self.loginState?(.userNotFound)
         }
@@ -52,9 +53,16 @@ class LoginViewModel: BaseViewModelDelegate {
     func login() {
         if username == "" {
             loginState?(.usernameBlank)
+            return
         }
+        
+        if password == "" {
+            loginState?(.passwordRequired)
+            return
+        }
+        
         loginCallback.commonResult(completion: loginListener)
-        loginUseCase.execute(useCaseCallBack: loginCallback, params: username)
+        loginUseCase.execute(useCaseCallBack: loginCallback, params: LoginRequest(username: username, password: password))
     }
     
     func subscribeLoginProcess(completion: @escaping BooleanCompletionBlock) -> Disposable {

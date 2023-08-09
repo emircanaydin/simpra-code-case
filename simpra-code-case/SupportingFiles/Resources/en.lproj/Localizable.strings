@@ -12,5 +12,8 @@
 "login" = "Login";
 "user_not_found" = "User not found!";
 "username_blank" = "Username field is blank!";
+"password_required" = "Password required!";
+"wrong_password" = "Wrong password!";
+"friends_note" = "Friend's Note";
 "social_links" = "Social Media Links";
 

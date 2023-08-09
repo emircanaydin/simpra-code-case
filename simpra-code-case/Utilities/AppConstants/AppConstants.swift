@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct AppConstants {
+    static let defaultPassword: String = "123456"
+}
+
 struct DatabaseKeys {
     static let LoginUsernamesKey: String = "LoginKeys"
 }

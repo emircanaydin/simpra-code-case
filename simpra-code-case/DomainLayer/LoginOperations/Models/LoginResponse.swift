@@ -10,6 +10,12 @@ import Foundation
 enum LoginError {
     case userNotFound
     case userListNotFound
+    case wrongPassword
+}
+
+struct LoginRequest {
+    let username: String
+    let password: String
 }
 
 struct LoginResponse {

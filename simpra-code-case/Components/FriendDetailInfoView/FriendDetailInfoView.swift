@@ -30,7 +30,7 @@ class FriendDetailInfoView: GenericBaseView<FriendDetailInfoViewData> {
     
     private lazy var friendNotesTitle: UILabel = {
         let temp = UILabel()
-        temp.text = "Friend's Note"
+        temp.text = Localizables.friendsNote.value
         temp.font = FontManager.robotoMedium(18).value
         temp.textColor = Colors.paleGray.value
         temp.textAlignment = .left

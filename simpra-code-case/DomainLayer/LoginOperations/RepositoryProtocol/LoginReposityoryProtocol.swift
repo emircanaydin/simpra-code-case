@@ -9,5 +9,5 @@ import Foundation
 import RxSwift
 
 protocol LoginReposityoryProtocol {
-    func login(username: String) -> Single<LoginResponse>
+    func login(username: String, password: String) -> Single<LoginResponse>
 }

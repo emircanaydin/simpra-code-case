@@ -8,8 +8,8 @@
 import Foundation
 import RxSwift
 
-class LoginUseCase: SingleUseCase<String, LoginResponse, LoginReposityoryProtocol> {
-    override func generateUseCase(parameter: String) -> Single<LoginResponse>? {
-        repository.login(username: parameter)
+class LoginUseCase: SingleUseCase<LoginRequest, LoginResponse, LoginReposityoryProtocol> {
+    override func generateUseCase(parameter: LoginRequest) -> Single<LoginResponse>? {
+        repository.login(username: parameter.username, password: parameter.password)
     }
 }

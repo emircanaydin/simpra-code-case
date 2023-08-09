@@ -15,5 +15,9 @@ enum Images: String, GenericValueProtocol {
         return UIImage(imageLiteralResourceName: rawValue)
     }
     
-    case logo = "simpra-logo"
+    case instagram = "instagram"
+    case facebook = "facebook"
+    case snapchat = "snapchat"
+    case tiktok = "tiktok"
+    case twitter = "twitter"
 }

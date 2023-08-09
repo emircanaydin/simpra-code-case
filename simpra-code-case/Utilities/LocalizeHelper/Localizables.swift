@@ -20,6 +20,7 @@ enum Localizables: String, GenericValueProtocol {
     case login = "login"
     case userNotFound = "user_not_found"
     case usernameBlank = "username_blank"
+    case socialLinks = "social_links"
 }
 
 extension String {

@@ -17,6 +17,7 @@ extension Assembler {
                                    FriendListCoordinatorAssembler(),
                                    AuthenticationAssembler(),
                                    FriendListServiceAssembler(),
+                                   FriendDetailCoordinatorAssembler(),
                                    NetworkAssembler()],
                                   container: container)
         return assembler

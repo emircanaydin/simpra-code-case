@@ -10,6 +10,8 @@ import Foundation
 class FriendListViewController: BaseViewController<FriendListViewModel> {
     private var friendListCollectionComponent: FriendListCollectionComponent!
     
+    weak var router: FriendListRouter?
+    
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
         self.view.backgroundColor = Colors.lightGray.value
@@ -33,7 +35,7 @@ class FriendListViewController: BaseViewController<FriendListViewModel> {
     
     private func listenViewModelSelectedData() {
         viewModel.listenSelectedItem { [weak self] friend in
-            
+            self?.router?.pushDetail(with: friend)
         }
     }
     

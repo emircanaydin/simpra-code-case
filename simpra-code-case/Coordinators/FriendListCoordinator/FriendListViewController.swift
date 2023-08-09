@@ -8,8 +8,35 @@
 import Foundation
 
 class FriendListViewController: BaseViewController<FriendListViewModel> {
+    private var friendListCollectionComponent: FriendListCollectionComponent!
+    
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
-        self.view.backgroundColor = .cyan
+        addFriendListComponent()
+        listenViewModelDataState()
+    }
+    
+    private func addFriendListComponent() {
+        friendListCollectionComponent = FriendListCollectionComponent(data: FriendListCollectionComponentData(isRefreshingSupported: true))
+        friendListCollectionComponent.setupDelegation(with: viewModel)
+        
+        view.addSubview(friendListCollectionComponent)
+        
+        friendListCollectionComponent.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+    
+    private func listenViewModelDataState() {
+        viewModel.listenCollectionState { [weak self] state in
+            guard let self = self else { return }
+            switch state {
+            case .done:
+                self.friendListCollectionComponent.reloadCollectionComponent()
+            default:
+                break
+                
+            }
+        }
     }
 }

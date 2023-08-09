@@ -11,7 +11,6 @@ class FriendDetailViewController: BaseViewController<FriendDetailViewModel> {
     private var friendDetailView: FriendDetailView!
     
     override func prepareViewControllerConfigurations() {
-        self.view.backgroundColor = .green
         addFriendDetail()
     }
     

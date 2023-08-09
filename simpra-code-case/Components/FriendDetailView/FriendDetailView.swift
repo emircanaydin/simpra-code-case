@@ -21,6 +21,7 @@ class FriendDetailView: GenericBaseView<FriendDetailViewData> {
         collection.showsHorizontalScrollIndicator = false
         collection.genericRegisterCell(FriendDetailInfoViewCell.self)
         collection.register(FriendDetailHeaderReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: FriendDetailHeaderReusableView.identifier)
+        collection.register(FriendDetailFooterReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FriendDetailFooterReusableView.identifier)
         return collection
     }()
     
@@ -56,6 +57,9 @@ extension FriendDetailView: UICollectionViewDelegate, UICollectionViewDataSource
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: FriendDetailHeaderReusableView.identifier, for: indexPath) as? FriendDetailHeaderReusableView else { return UICollectionReusableView() }
             setData(to: header)
             return header
+        case UICollectionView.elementKindSectionFooter:
+            guard let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: FriendDetailFooterReusableView.identifier, for: indexPath) as? FriendDetailFooterReusableView else { return UICollectionReusableView() }
+            return footer
         default:
             return UICollectionReusableView()
         }
@@ -63,6 +67,10 @@ extension FriendDetailView: UICollectionViewDelegate, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: 340)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width, height: 50)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

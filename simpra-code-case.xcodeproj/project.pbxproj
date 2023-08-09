@@ -74,6 +74,9 @@
 		9064AC912A82EC3A00F53F5F /* AuthenticationAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC902A82EC3A00F53F5F /* AuthenticationAssembler.swift */; };
 		9064AC932A82ED7000F53F5F /* NetworkAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC922A82ED7000F53F5F /* NetworkAssembler.swift */; };
 		9064AC962A82ED9F00F53F5F /* AccessProviderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC952A82ED9F00F53F5F /* AccessProviderManager.swift */; };
+		9064AC992A83B13200F53F5F /* FriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC982A83B13200F53F5F /* FriendListViewModel.swift */; };
+		9064AC9B2A83B1BB00F53F5F /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC9A2A83B1BB00F53F5F /* FriendListViewController.swift */; };
+		9064AC9D2A83B1FF00F53F5F /* FriendListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC9C2A83B1FF00F53F5F /* FriendListCoordinator.swift */; };
 		906B857F2A8263F600DFBB99 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 906B857E2A8263F600DFBB99 /* Realm */; };
 		906B85812A8263F600DFBB99 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85802A8263F600DFBB99 /* RealmSwift */; };
 		906B85842A82640B00DFBB99 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85832A82640B00DFBB99 /* SwinjectAutoregistration */; };
@@ -171,6 +174,9 @@
 		9064AC902A82EC3A00F53F5F /* AuthenticationAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAssembler.swift; sourceTree = "<group>"; };
 		9064AC922A82ED7000F53F5F /* NetworkAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembler.swift; sourceTree = "<group>"; };
 		9064AC952A82ED9F00F53F5F /* AccessProviderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessProviderManager.swift; sourceTree = "<group>"; };
+		9064AC982A83B13200F53F5F /* FriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewModel.swift; sourceTree = "<group>"; };
+		9064AC9A2A83B1BB00F53F5F /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
+		9064AC9C2A83B1FF00F53F5F /* FriendListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,8 +344,9 @@
 			isa = PBXGroup;
 			children = (
 				9064ABF02A826C5300F53F5F /* AppCoordinator */,
-				9064AC0D2A82747500F53F5F /* LoginCoordinator */,
 				9064ABEB2A826B9E00F53F5F /* SplashCoordinator */,
+				9064AC0D2A82747500F53F5F /* LoginCoordinator */,
+				9064AC972A83B11B00F53F5F /* FriendListCoordinator */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -709,6 +716,16 @@
 			path = AccessProviderManager;
 			sourceTree = "<group>";
 		};
+		9064AC972A83B11B00F53F5F /* FriendListCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9064AC9C2A83B1FF00F53F5F /* FriendListCoordinator.swift */,
+				9064AC9A2A83B1BB00F53F5F /* FriendListViewController.swift */,
+				9064AC982A83B13200F53F5F /* FriendListViewModel.swift */,
+			);
+			path = FriendListCoordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -866,6 +883,7 @@
 				9064AC522A82C40000F53F5F /* ActionButtonData.swift in Sources */,
 				9064AC782A82D06700F53F5F /* LoginResponse.swift in Sources */,
 				9064AC8C2A82D36600F53F5F /* LoginDataRepository.swift in Sources */,
+				9064AC9B2A83B1BB00F53F5F /* FriendListViewController.swift in Sources */,
 				9064AC102A82748D00F53F5F /* LoginViewModel.swift in Sources */,
 				9064AC4D2A82AB2700F53F5F /* Localizables.swift in Sources */,
 				9064AC962A82ED9F00F53F5F /* AccessProviderManager.swift in Sources */,
@@ -879,6 +897,7 @@
 				9064ABF42A826C7300F53F5F /* AppViewModel.swift in Sources */,
 				9064AC7B2A82D0F700F53F5F /* LoginReposityoryProtocol.swift in Sources */,
 				9064AC092A82713800F53F5F /* SavedArray.swift in Sources */,
+				9064AC992A83B13200F53F5F /* FriendListViewModel.swift in Sources */,
 				9064ABF22A826C6600F53F5F /* AppCoordinator.swift in Sources */,
 				9064AC012A826E2700F53F5F /* AppCoordinatorAssembler.swift in Sources */,
 				9064AC932A82ED7000F53F5F /* NetworkAssembler.swift in Sources */,
@@ -903,6 +922,7 @@
 				9064AC1F2A82844000F53F5F /* Colors.swift in Sources */,
 				9064AC432A82A62600F53F5F /* FontManager.swift in Sources */,
 				9064AC912A82EC3A00F53F5F /* AuthenticationAssembler.swift in Sources */,
+				9064AC9D2A83B1FF00F53F5F /* FriendListCoordinator.swift in Sources */,
 				9064AC842A82D20100F53F5F /* LoginDataRemoteProtocol.swift in Sources */,
 				9064AC032A826E3C00F53F5F /* SplashCoordinatorAssembler.swift in Sources */,
 				9064AC8F2A82D3C200F53F5F /* LoginServiceProvider.swift in Sources */,

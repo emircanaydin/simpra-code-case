@@ -16,13 +16,17 @@ class AuthenticationManager: AuthenticationManagerProtocol {
         DatabaseManager.shared.checkDataIsExists(key: DatabaseKeys.LoginUsernamesKey, type: SavedArray.self)
     }
     
-    class func login(username: String) -> LoginResponse {
+    class func login(username: String, password: String) -> LoginResponse {
         guard let usersObject = DatabaseManager.shared.getObject(SavedArray.self, key: DatabaseKeys.LoginUsernamesKey) else {
             return LoginResponse(isSuccess: false, username: nil, error: .userListNotFound)
         }
         
         guard let user = usersObject.data.filter({ $0 == username }).first else {
             return LoginResponse(isSuccess: false, username: nil, error: .userNotFound)
+        }
+        
+        if password != AppConstants.defaultPassword {
+            return LoginResponse(isSuccess: false, username: nil, error: .wrongPassword)
         }
         
         return LoginResponse(isSuccess: true, username: user, error: nil)

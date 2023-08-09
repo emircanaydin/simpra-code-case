@@ -65,6 +65,7 @@ class LoginViewController: BaseViewController<LoginViewModel> {
         addComponents()
         configureLoginButton()
         configureUsernameField()
+        configurePasswordField()
         listenLoginState()
     }
     
@@ -109,18 +110,34 @@ class LoginViewController: BaseViewController<LoginViewModel> {
         }
     }
     
+    // TODO: Hallet
     private func listenLoginState() {
         viewModel.listenLoginState { state in
             switch state {
-            case .success:
-                self.viewModel.fireLoginProcessFinish()
+            case .success(let response):
+                if response.isSuccess {
+                    self.viewModel.fireLoginProcessFinish()
+                } else {
+                    self.showLoginFailureReason(error: response.error!)
+                }
             case .userNotFound:
                 self.usernameTextField.error(message: Localizables.userNotFound.value)
             case .usernameBlank:
                 self.usernameTextField.error(message: Localizables.usernameBlank.value)
-            default:
-                break
+            case .passwordRequired:
+                self.passwordTextField.error(message: Localizables.passwordRequired.value)
             }
+        }
+    }
+    
+    private func showLoginFailureReason(error: LoginError) {
+        switch error {
+        case .userNotFound:
+            self.usernameTextField.error(message: Localizables.userNotFound.value)
+        case .userListNotFound:
+            self.usernameTextField.error(message: Localizables.userNotFound.value)
+        case .wrongPassword:
+            self.passwordTextField.error(message: Localizables.wrongPassword.value)
         }
     }
     
@@ -131,8 +148,13 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     }
     
     private func configureUsernameField() {
-        let usernameField = CustomTextFieldData(textChangeListener: usernameFieldChangeListener)
-        usernameTextField.setData(data: usernameField)
+        let usernameFieldData = CustomTextFieldData(textChangeListener: usernameFieldChangeListener)
+        usernameTextField.setData(data: usernameFieldData)
+    }
+    
+    private func configurePasswordField() {
+        let passwordFieldData = CustomTextFieldData(textChangeListener: passwordFieldChangeListener)
+        passwordTextField.setData(data: passwordFieldData)
     }
     
     private lazy var loginAction: VoidCompletionBlock = { [weak self] in
@@ -143,6 +165,11 @@ class LoginViewController: BaseViewController<LoginViewModel> {
     private lazy var usernameFieldChangeListener: TextChangeBlock = { [weak self] text in
         guard let self = self, let username = text else { return }
         self.viewModel.username = username
+    }
+    
+    private lazy var passwordFieldChangeListener: TextChangeBlock = { [weak self] text in
+        guard let self = self, let password = text else { return }
+        self.viewModel.password = password
     }
     
     private var headerHeight: CGFloat {

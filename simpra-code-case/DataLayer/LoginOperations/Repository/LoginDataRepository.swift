@@ -8,7 +8,7 @@
 import RxSwift
 
 class LoginDataRepository: BaseRepository<LoginDataRemoteProtocol>, LoginReposityoryProtocol {
-    func login(username: String) -> Single<LoginResponse> {
-        apiRemote.login(username: username)
+    func login(username: String, password: String) -> Single<LoginResponse> {
+        apiRemote.login(username: username, password: password)
     }
 }

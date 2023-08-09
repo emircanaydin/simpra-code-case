@@ -53,15 +53,6 @@
 		9064AC502A82C3EE00F53F5F /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC4F2A82C3EE00F53F5F /* ActionButton.swift */; };
 		9064AC522A82C40000F53F5F /* ActionButtonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC512A82C40000F53F5F /* ActionButtonData.swift */; };
 		9064AC542A82C50C00F53F5F /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC532A82C50C00F53F5F /* UIView+Extensions.swift */; };
-		9064AC602A82CF0700F53F5F /* BaseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC582A82CF0700F53F5F /* BaseUseCase.swift */; };
-		9064AC612A82CF0700F53F5F /* BaseUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC592A82CF0700F53F5F /* BaseUseCaseProtocol.swift */; };
-		9064AC622A82CF0700F53F5F /* SingleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC5A2A82CF0700F53F5F /* SingleUseCase.swift */; };
-		9064AC632A82CF0700F53F5F /* UseCaseCallBackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC5C2A82CF0700F53F5F /* UseCaseCallBackProtocol.swift */; };
-		9064AC642A82CF0700F53F5F /* UseCaseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC5D2A82CF0700F53F5F /* UseCaseCallback.swift */; };
-		9064AC652A82CF0700F53F5F /* UseCaseListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC5F2A82CF0700F53F5F /* UseCaseListener.swift */; };
-		9064AC6C2A82CF3A00F53F5F /* BaseApiRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC692A82CF3A00F53F5F /* BaseApiRemote.swift */; };
-		9064AC6D2A82CF3A00F53F5F /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC6B2A82CF3A00F53F5F /* BaseRepository.swift */; };
-		9064AC702A82CF5C00F53F5F /* EndpointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC6F2A82CF5C00F53F5F /* EndpointManager.swift */; };
 		9064AC762A82D04500F53F5F /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC752A82D04500F53F5F /* LoginUseCase.swift */; };
 		9064AC782A82D06700F53F5F /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC772A82D06700F53F5F /* LoginResponse.swift */; };
 		9064AC7B2A82D0F700F53F5F /* LoginReposityoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AC7A2A82D0F700F53F5F /* LoginReposityoryProtocol.swift */; };
@@ -129,6 +120,15 @@
 		9064AD3A2A842BD400F53F5F /* SocialLinksViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD392A842BD400F53F5F /* SocialLinksViewData.swift */; };
 		9064AD3C2A842BE100F53F5F /* SocialLinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD3B2A842BE100F53F5F /* SocialLinksView.swift */; };
 		9064AD3F2A842D4500F53F5F /* FriendDetailFooterReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD3E2A842D4500F53F5F /* FriendDetailFooterReusableView.swift */; };
+		9064AD422A843ABA00F53F5F /* EndPointManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD412A843ABA00F53F5F /* EndPointManager.swift */; };
+		9064AD452A843AFD00F53F5F /* BaseApiRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD442A843AFD00F53F5F /* BaseApiRemote.swift */; };
+		9064AD472A843B1100F53F5F /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD462A843B1100F53F5F /* BaseRepository.swift */; };
+		9064AD4B2A843BCA00F53F5F /* UseCaseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD4A2A843BCA00F53F5F /* UseCaseCallback.swift */; };
+		9064AD4D2A843BE800F53F5F /* UseCaseCallbackInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD4C2A843BE800F53F5F /* UseCaseCallbackInteractor.swift */; };
+		9064AD502A843C1700F53F5F /* UseCaseListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD4F2A843C1700F53F5F /* UseCaseListener.swift */; };
+		9064AD532A843C3500F53F5F /* BaseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD522A843C3500F53F5F /* BaseUseCase.swift */; };
+		9064AD552A843C5300F53F5F /* BaseUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD542A843C5300F53F5F /* BaseUseCaseInterface.swift */; };
+		9064AD572A843C6400F53F5F /* SingleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD562A843C6400F53F5F /* SingleUseCase.swift */; };
 		906B857F2A8263F600DFBB99 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 906B857E2A8263F600DFBB99 /* Realm */; };
 		906B85812A8263F600DFBB99 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85802A8263F600DFBB99 /* RealmSwift */; };
 		906B85842A82640B00DFBB99 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85832A82640B00DFBB99 /* SwinjectAutoregistration */; };
@@ -205,15 +205,6 @@
 		9064AC4F2A82C3EE00F53F5F /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		9064AC512A82C40000F53F5F /* ActionButtonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonData.swift; sourceTree = "<group>"; };
 		9064AC532A82C50C00F53F5F /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		9064AC582A82CF0700F53F5F /* BaseUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUseCase.swift; sourceTree = "<group>"; };
-		9064AC592A82CF0700F53F5F /* BaseUseCaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUseCaseProtocol.swift; sourceTree = "<group>"; };
-		9064AC5A2A82CF0700F53F5F /* SingleUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleUseCase.swift; sourceTree = "<group>"; };
-		9064AC5C2A82CF0700F53F5F /* UseCaseCallBackProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseCallBackProtocol.swift; sourceTree = "<group>"; };
-		9064AC5D2A82CF0700F53F5F /* UseCaseCallback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseCallback.swift; sourceTree = "<group>"; };
-		9064AC5F2A82CF0700F53F5F /* UseCaseListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseListener.swift; sourceTree = "<group>"; };
-		9064AC692A82CF3A00F53F5F /* BaseApiRemote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseApiRemote.swift; sourceTree = "<group>"; };
-		9064AC6B2A82CF3A00F53F5F /* BaseRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
-		9064AC6F2A82CF5C00F53F5F /* EndpointManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointManager.swift; sourceTree = "<group>"; };
 		9064AC752A82D04500F53F5F /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		9064AC772A82D06700F53F5F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		9064AC7A2A82D0F700F53F5F /* LoginReposityoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReposityoryProtocol.swift; sourceTree = "<group>"; };
@@ -281,6 +272,15 @@
 		9064AD392A842BD400F53F5F /* SocialLinksViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLinksViewData.swift; sourceTree = "<group>"; };
 		9064AD3B2A842BE100F53F5F /* SocialLinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLinksView.swift; sourceTree = "<group>"; };
 		9064AD3E2A842D4500F53F5F /* FriendDetailFooterReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailFooterReusableView.swift; sourceTree = "<group>"; };
+		9064AD412A843ABA00F53F5F /* EndPointManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointManager.swift; sourceTree = "<group>"; };
+		9064AD442A843AFD00F53F5F /* BaseApiRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiRemote.swift; sourceTree = "<group>"; };
+		9064AD462A843B1100F53F5F /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		9064AD4A2A843BCA00F53F5F /* UseCaseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseCallback.swift; sourceTree = "<group>"; };
+		9064AD4C2A843BE800F53F5F /* UseCaseCallbackInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseCallbackInteractor.swift; sourceTree = "<group>"; };
+		9064AD4F2A843C1700F53F5F /* UseCaseListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseListener.swift; sourceTree = "<group>"; };
+		9064AD522A843C3500F53F5F /* BaseUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUseCase.swift; sourceTree = "<group>"; };
+		9064AD542A843C5300F53F5F /* BaseUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUseCaseInterface.swift; sourceTree = "<group>"; };
+		9064AD562A843C6400F53F5F /* SingleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -656,95 +656,22 @@
 		9064AC552A82CE4E00F53F5F /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
-				9064AC562A82CF0700F53F5F /* BaseModules */,
+				9064AD482A843BA200F53F5F /* BaseModules */,
 				9064AC7C2A82D14D00F53F5F /* LoginOperations */,
 				9064ACA02A83B6D900F53F5F /* FriendListOperations */,
 			);
 			path = DomainLayer;
 			sourceTree = "<group>";
 		};
-		9064AC562A82CF0700F53F5F /* BaseModules */ = {
-			isa = PBXGroup;
-			children = (
-				9064AC572A82CF0700F53F5F /* UseCaseModules */,
-				9064AC5B2A82CF0700F53F5F /* BaseCallbackModules */,
-				9064AC5E2A82CF0700F53F5F /* Listeners */,
-			);
-			name = BaseModules;
-			path = "../../../cs-code-case/CSCodeCase/CSDomainLayer/BaseModules";
-			sourceTree = "<group>";
-		};
-		9064AC572A82CF0700F53F5F /* UseCaseModules */ = {
-			isa = PBXGroup;
-			children = (
-				9064AC582A82CF0700F53F5F /* BaseUseCase.swift */,
-				9064AC592A82CF0700F53F5F /* BaseUseCaseProtocol.swift */,
-				9064AC5A2A82CF0700F53F5F /* SingleUseCase.swift */,
-			);
-			path = UseCaseModules;
-			sourceTree = "<group>";
-		};
-		9064AC5B2A82CF0700F53F5F /* BaseCallbackModules */ = {
-			isa = PBXGroup;
-			children = (
-				9064AC5C2A82CF0700F53F5F /* UseCaseCallBackProtocol.swift */,
-				9064AC5D2A82CF0700F53F5F /* UseCaseCallback.swift */,
-			);
-			path = BaseCallbackModules;
-			sourceTree = "<group>";
-		};
-		9064AC5E2A82CF0700F53F5F /* Listeners */ = {
-			isa = PBXGroup;
-			children = (
-				9064AC5F2A82CF0700F53F5F /* UseCaseListener.swift */,
-			);
-			path = Listeners;
-			sourceTree = "<group>";
-		};
 		9064AC662A82CF1A00F53F5F /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
-				9064AC672A82CF3A00F53F5F /* BaseModules */,
+				9064AD432A843AF200F53F5F /* BaseModules */,
 				9064AC812A82D1D400F53F5F /* LoginOperations */,
 				9064ACAF2A83BA3700F53F5F /* FriendListOperations */,
-				9064AC6E2A82CF5C00F53F5F /* Utilities */,
+				9064AD402A843AB300F53F5F /* Utilities */,
 			);
 			path = DataLayer;
-			sourceTree = "<group>";
-		};
-		9064AC672A82CF3A00F53F5F /* BaseModules */ = {
-			isa = PBXGroup;
-			children = (
-				9064AC682A82CF3A00F53F5F /* BaseApiRemote */,
-				9064AC6A2A82CF3A00F53F5F /* BaseRepository */,
-			);
-			name = BaseModules;
-			path = "../../../cs-code-case/CSCodeCase/CSDataLayer/BaseModules";
-			sourceTree = "<group>";
-		};
-		9064AC682A82CF3A00F53F5F /* BaseApiRemote */ = {
-			isa = PBXGroup;
-			children = (
-				9064AC692A82CF3A00F53F5F /* BaseApiRemote.swift */,
-			);
-			path = BaseApiRemote;
-			sourceTree = "<group>";
-		};
-		9064AC6A2A82CF3A00F53F5F /* BaseRepository */ = {
-			isa = PBXGroup;
-			children = (
-				9064AC6B2A82CF3A00F53F5F /* BaseRepository.swift */,
-			);
-			path = BaseRepository;
-			sourceTree = "<group>";
-		};
-		9064AC6E2A82CF5C00F53F5F /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				9064AC6F2A82CF5C00F53F5F /* EndpointManager.swift */,
-			);
-			name = Utilities;
-			path = "../../../cs-code-case/CSCodeCase/CSDataLayer/Utilities";
 			sourceTree = "<group>";
 		};
 		9064AC742A82D03900F53F5F /* UseCases */ = {
@@ -1066,6 +993,60 @@
 			path = FriendDetailFooter;
 			sourceTree = "<group>";
 		};
+		9064AD402A843AB300F53F5F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9064AD412A843ABA00F53F5F /* EndPointManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9064AD432A843AF200F53F5F /* BaseModules */ = {
+			isa = PBXGroup;
+			children = (
+				9064AD442A843AFD00F53F5F /* BaseApiRemote.swift */,
+				9064AD462A843B1100F53F5F /* BaseRepository.swift */,
+			);
+			path = BaseModules;
+			sourceTree = "<group>";
+		};
+		9064AD482A843BA200F53F5F /* BaseModules */ = {
+			isa = PBXGroup;
+			children = (
+				9064AD492A843BB700F53F5F /* BaseCallbackModules */,
+				9064AD4E2A843BFC00F53F5F /* Listeners */,
+				9064AD512A843C2800F53F5F /* UseCaseModules */,
+			);
+			path = BaseModules;
+			sourceTree = "<group>";
+		};
+		9064AD492A843BB700F53F5F /* BaseCallbackModules */ = {
+			isa = PBXGroup;
+			children = (
+				9064AD4A2A843BCA00F53F5F /* UseCaseCallback.swift */,
+				9064AD4C2A843BE800F53F5F /* UseCaseCallbackInteractor.swift */,
+			);
+			path = BaseCallbackModules;
+			sourceTree = "<group>";
+		};
+		9064AD4E2A843BFC00F53F5F /* Listeners */ = {
+			isa = PBXGroup;
+			children = (
+				9064AD4F2A843C1700F53F5F /* UseCaseListener.swift */,
+			);
+			path = Listeners;
+			sourceTree = "<group>";
+		};
+		9064AD512A843C2800F53F5F /* UseCaseModules */ = {
+			isa = PBXGroup;
+			children = (
+				9064AD522A843C3500F53F5F /* BaseUseCase.swift */,
+				9064AD542A843C5300F53F5F /* BaseUseCaseInterface.swift */,
+				9064AD562A843C6400F53F5F /* SingleUseCase.swift */,
+			);
+			path = UseCaseModules;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1222,7 +1203,9 @@
 				9064ACDE2A83C9C500F53F5F /* FriendContentDisplayerCollectionViewCell.swift in Sources */,
 				9064AC1C2A8282A000F53F5F /* CustomTextField.swift in Sources */,
 				9064AC9F2A83B5D300F53F5F /* FriendListCoordinatorAssembler.swift in Sources */,
+				9064AD472A843B1100F53F5F /* BaseRepository.swift in Sources */,
 				9064ACBE2A83BDD600F53F5F /* FriendListDataApiRemote.swift in Sources */,
+				9064AD572A843C6400F53F5F /* SingleUseCase.swift in Sources */,
 				9064AD052A83D18100F53F5F /* LoadingType.swift in Sources */,
 				9064ACDB2A83C99F00F53F5F /* FriendContentDisplayerView.swift in Sources */,
 				9064AC522A82C40000F53F5F /* ActionButtonData.swift in Sources */,
@@ -1238,13 +1221,13 @@
 				9064AC962A82ED9F00F53F5F /* AccessProviderManager.swift in Sources */,
 				9064ABE22A82671E00F53F5F /* Coordinator.swift in Sources */,
 				9064ABF92A826D0000F53F5F /* SplashCoordinator.swift in Sources */,
-				9064AC6D2A82CF3A00F53F5F /* BaseRepository.swift in Sources */,
 				9064AD142A84121600F53F5F /* FriendDetailViewModel.swift in Sources */,
 				9064AD092A83D1BB00F53F5F /* CustomImageViewComponentContainer.swift in Sources */,
 				9064AC862A82D2A700F53F5F /* LoginServiceProviderManagerProtocol.swift in Sources */,
 				9064ACD22A83C8E000F53F5F /* FriendListCollectionComponentData.swift in Sources */,
 				9064AD2E2A84183600F53F5F /* FriendDetailView.swift in Sources */,
 				9064AD252A84170D00F53F5F /* GenericUICollectionReusableView.swift in Sources */,
+				9064AD4D2A843BE800F53F5F /* UseCaseCallbackInteractor.swift in Sources */,
 				9064ACE02A83C9E000F53F5F /* GenericCollectionViewCell.swift in Sources */,
 				9064AD3C2A842BE100F53F5F /* SocialLinksView.swift in Sources */,
 				9064AD372A84267700F53F5F /* FriendDetailDataFormatter.swift in Sources */,
@@ -1253,7 +1236,6 @@
 				9064ACB72A83BC0900F53F5F /* FriendListServiceProvider.swift in Sources */,
 				9064AD1F2A84164A00F53F5F /* FriendDetailHeaderViewData.swift in Sources */,
 				9064ACE22A83CA4000F53F5F /* UICollectionView+Extensions.swift in Sources */,
-				9064AC702A82CF5C00F53F5F /* EndpointManager.swift in Sources */,
 				9064ACAB2A83B96900F53F5F /* FriendListRepositoryProtocol.swift in Sources */,
 				9064AC542A82C50C00F53F5F /* UIView+Extensions.swift in Sources */,
 				9064ABF42A826C7300F53F5F /* AppViewModel.swift in Sources */,
@@ -1270,6 +1252,7 @@
 				9064ABE92A8268C600F53F5F /* DatabaseManager.swift in Sources */,
 				9064AD272A84173600F53F5F /* BaseCollectionReusableView.swift in Sources */,
 				9064ABEF2A826BE400F53F5F /* SplashViewController.swift in Sources */,
+				9064AD4B2A843BCA00F53F5F /* UseCaseCallback.swift in Sources */,
 				9064AC222A828B2300F53F5F /* ImageHelper.swift in Sources */,
 				9064AC162A82761D00F53F5F /* LoginCoordinatorAssembler.swift in Sources */,
 				9064ACCA2A83C34900F53F5F /* CollectionState.swift in Sources */,
@@ -1286,21 +1269,19 @@
 				9064AD182A84128000F53F5F /* FriendDetailViewController.swift in Sources */,
 				9064ACA32A83B70100F53F5F /* FriendListResponse.swift in Sources */,
 				9064AD3A2A842BD400F53F5F /* SocialLinksViewData.swift in Sources */,
-				9064AC602A82CF0700F53F5F /* BaseUseCase.swift in Sources */,
 				9064ABE62A82677700F53F5F /* Assembler+Extensions.swift in Sources */,
-				9064AC642A82CF0700F53F5F /* UseCaseCallback.swift in Sources */,
 				9064AD312A841A0F00F53F5F /* FriendDetailInfoViewData.swift in Sources */,
 				9064AD332A841A5300F53F5F /* FriendDetailInfoView.swift in Sources */,
-				9064AC6C2A82CF3A00F53F5F /* BaseApiRemote.swift in Sources */,
 				9064AD212A84167C00F53F5F /* FriendDetailHeaderView.swift in Sources */,
 				9064ACB92A83BD4800F53F5F /* FriendListServiceProviderManager.swift in Sources */,
 				9064ACA52A83B8F900F53F5F /* FriendListRequest.swift in Sources */,
 				9064ABD52A82662D00F53F5F /* BaseViewController.swift in Sources */,
+				9064AD502A843C1700F53F5F /* UseCaseListener.swift in Sources */,
 				9064ABD72A82669200F53F5F /* GenericBaseView.swift in Sources */,
 				9064AD0B2A83D1D800F53F5F /* CustomImageViewComponentData.swift in Sources */,
-				9064AC652A82CF0700F53F5F /* UseCaseListener.swift in Sources */,
 				9064ACB22A83BA5400F53F5F /* FriendListDataApiRemoteProtocol.swift in Sources */,
 				9064AC062A82711000F53F5F /* AuthenticationManager.swift in Sources */,
+				9064AD452A843AFD00F53F5F /* BaseApiRemote.swift in Sources */,
 				9064ACA72A83B91A00F53F5F /* FriendListCallback.swift in Sources */,
 				9064AC142A8274D100F53F5F /* LoginCoordinator.swift in Sources */,
 				9064AD3F2A842D4500F53F5F /* FriendDetailFooterReusableView.swift in Sources */,
@@ -1313,22 +1294,22 @@
 				9064AC032A826E3C00F53F5F /* SplashCoordinatorAssembler.swift in Sources */,
 				9064AC8F2A82D3C200F53F5F /* LoginServiceProvider.swift in Sources */,
 				9064AC0C2A8271C600F53F5F /* AppConstants.swift in Sources */,
+				9064AD532A843C3500F53F5F /* BaseUseCase.swift in Sources */,
 				9064ABE02A82670700F53F5F /* BaseCoordinator.swift in Sources */,
-				9064AC612A82CF0700F53F5F /* BaseUseCaseProtocol.swift in Sources */,
 				9064AC1A2A82829400F53F5F /* CustomTextFieldData.swift in Sources */,
-				9064AC622A82CF0700F53F5F /* SingleUseCase.swift in Sources */,
 				9064ACF12A83D06B00F53F5F /* ImageCacheManager.swift in Sources */,
 				9064ABDB2A8266BF00F53F5F /* BaseViewModelDelegate.swift in Sources */,
+				9064AD422A843ABA00F53F5F /* EndPointManager.swift in Sources */,
 				9064ACC62A83C1F200F53F5F /* PaginationInfo.swift in Sources */,
 				9064AD162A84125A00F53F5F /* FriendDetailCoordinator.swift in Sources */,
 				9064ABDD2A8266DF00F53F5F /* GenericValueProtocol.swift in Sources */,
 				9064ABF72A826CE100F53F5F /* ViewControllerUtils.swift in Sources */,
 				9064ABFE2A826E0E00F53F5F /* AssemblerResolverDelegate.swift in Sources */,
 				9064AD1A2A8413D200F53F5F /* FriendListRouter.swift in Sources */,
-				9064AC632A82CF0700F53F5F /* UseCaseCallBackProtocol.swift in Sources */,
 				9064AD232A8416C800F53F5F /* FriendDetailHeaderFlowLayout.swift in Sources */,
 				9064AC762A82D04500F53F5F /* LoginUseCase.swift in Sources */,
 				9064ACD02A83C6AE00F53F5F /* FriendListCollectionComponentDelegate.swift in Sources */,
+				9064AD552A843C5300F53F5F /* BaseUseCaseInterface.swift in Sources */,
 				9064AC892A82D2C900F53F5F /* LoginDataApiRemote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

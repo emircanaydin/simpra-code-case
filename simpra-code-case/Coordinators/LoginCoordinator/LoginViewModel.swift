@@ -28,6 +28,8 @@ class LoginViewModel: BaseViewModelDelegate {
     private var loginCallback: LoginCallback
     private var loginUseCase: LoginUseCase
     
+    private var loginFinalize = BehaviorRelay<Bool>(value: false)
+    
     init(loginCallback: LoginCallback, loginUseCase: LoginUseCase) {
         self.loginCallback = loginCallback
         self.loginUseCase = loginUseCase
@@ -53,5 +55,15 @@ class LoginViewModel: BaseViewModelDelegate {
         }
         loginCallback.commonResult(completion: loginListener)
         loginUseCase.execute(useCaseCallBack: loginCallback, params: username)
+    }
+    
+    func subscribeLoginProcess(completion: @escaping BooleanCompletionBlock) -> Disposable {
+        loginFinalize.subscribe(onNext: completion)
+    }
+    
+    func fireLoginProcessFinish() {
+        DispatchQueue.main.async {
+            self.loginFinalize.accept(true)
+        }
     }
 }

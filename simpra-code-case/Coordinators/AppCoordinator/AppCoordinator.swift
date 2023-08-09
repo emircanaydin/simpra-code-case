@@ -21,6 +21,12 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
         }
     }
     
+    private lazy var loginProcessListener: BooleanCompletionBlock = { [weak self] completed in
+        if completed {
+            self?.launchFriendList()
+        }
+    }
+    
     override func start() {
         window.makeKeyAndVisible()
         loadSplashScreen()
@@ -30,6 +36,17 @@ class AppCoordinator: BaseCoordinator<AppViewModel> {
     private func launchMainProcess() {
         removeChildCoordinators()
         guard let coordinator = assemblerResolver.resolve(LoginCoordinator.self) else { return }
+        start(coordinator: coordinator)
+        
+        coordinator.listenLoginCoordinatorFinishes(completion: loginProcessListener).disposed(by: disposeBag)
+        
+        ViewControllerUtils.setRootViewController(window: window, viewController: coordinator.navigationController, withAnimation: false)
+    }
+    
+    // MARK: - Friend List Implemantations -
+    private func launchFriendList() {
+        removeChildCoordinators()
+        guard let coordinator = assemblerResolver.resolve(FriendListCoordinator.self) else { return }
         start(coordinator: coordinator)
         
         ViewControllerUtils.setRootViewController(window: window, viewController: coordinator.navigationController, withAnimation: false)

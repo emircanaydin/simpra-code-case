@@ -416,6 +416,7 @@
 				9064ABEB2A826B9E00F53F5F /* SplashCoordinator */,
 				9064AC0D2A82747500F53F5F /* LoginCoordinator */,
 				9064AC972A83B11B00F53F5F /* FriendListCoordinator */,
+				9064AD112A83F16000F53F5F /* FriendDetailCoordinator */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -956,6 +957,13 @@
 				9064AD0A2A83D1D800F53F5F /* CustomImageViewComponentData.swift */,
 			);
 			path = CustomImageComponents;
+			sourceTree = "<group>";
+		};
+		9064AD112A83F16000F53F5F /* FriendDetailCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FriendDetailCoordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

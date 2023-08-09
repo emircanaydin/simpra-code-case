@@ -10,7 +10,7 @@ import RxSwift
 import NetworkEntityLayer
 
 typealias CollectionLoadingStateBlock = (CollectionLoadingState) -> Void
-typealias CollectionSelectedItemBlock = (Int) -> Void
+typealias CollectionSelectedItemBlock = (Friend) -> Void
 
 class FriendListViewModel: BaseViewModelDelegate {
     var dismissInformer: PublishSubject<Void>?
@@ -35,6 +35,10 @@ class FriendListViewModel: BaseViewModelDelegate {
     
     func listenCollectionState(with completion: @escaping CollectionLoadingStateBlock) {
         collectionState = completion
+    }
+    
+    func listenSelectedItem(with completion: @escaping CollectionSelectedItemBlock) {
+        selectedItemBlock = completion
     }
     
     func refreshData(with externalRefresh: Bool = false) {
@@ -81,7 +85,7 @@ extension FriendListViewModel: FriendListCollectionComponentDelegate {
     }
     
     func selectedItem(at index: Int) {
-        selectedItemBlock?(index)
+        selectedItemBlock?(dataFormatter.getRawData(at: index))
     }
     
     func refreshCollectionView() {

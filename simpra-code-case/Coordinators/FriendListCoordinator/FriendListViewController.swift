@@ -15,6 +15,7 @@ class FriendListViewController: BaseViewController<FriendListViewModel> {
         self.view.backgroundColor = Colors.lightGray.value
         addFriendListComponent()
         listenViewModelDataState()
+        listenViewModelSelectedData()
         
         viewModel.getFriendList()
     }
@@ -27,6 +28,12 @@ class FriendListViewController: BaseViewController<FriendListViewModel> {
         
         friendListCollectionComponent.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+        }
+    }
+    
+    private func listenViewModelSelectedData() {
+        viewModel.listenSelectedItem { [weak self] friend in
+            
         }
     }
     

@@ -101,6 +101,17 @@ extension FriendListCollectionComponent: UICollectionViewDelegate, UICollectionV
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? FriendContentDisplayerCollectionViewCell else { return }
+        isUserInteractionEnabled = false
+        cell.startTappedAnimation { [weak self] finish in
+            if finish {
+                self?.delegate?.selectedItem(at: indexPath.row)
+                self?.isUserInteractionEnabled = true
+            }
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if isLoadingCell(for: indexPath) {
             delegate?.getMoreData()

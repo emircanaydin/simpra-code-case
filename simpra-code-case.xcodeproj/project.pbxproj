@@ -124,6 +124,8 @@
 		9064AD2E2A84183600F53F5F /* FriendDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD2D2A84183600F53F5F /* FriendDetailView.swift */; };
 		9064AD312A841A0F00F53F5F /* FriendDetailInfoViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD302A841A0F00F53F5F /* FriendDetailInfoViewData.swift */; };
 		9064AD332A841A5300F53F5F /* FriendDetailInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD322A841A5300F53F5F /* FriendDetailInfoView.swift */; };
+		9064AD352A84261A00F53F5F /* FriendDetailDataFormatterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD342A84261A00F53F5F /* FriendDetailDataFormatterProtocol.swift */; };
+		9064AD372A84267700F53F5F /* FriendDetailDataFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9064AD362A84267700F53F5F /* FriendDetailDataFormatter.swift */; };
 		906B857F2A8263F600DFBB99 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 906B857E2A8263F600DFBB99 /* Realm */; };
 		906B85812A8263F600DFBB99 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85802A8263F600DFBB99 /* RealmSwift */; };
 		906B85842A82640B00DFBB99 /* SwinjectAutoregistration in Frameworks */ = {isa = PBXBuildFile; productRef = 906B85832A82640B00DFBB99 /* SwinjectAutoregistration */; };
@@ -271,6 +273,8 @@
 		9064AD2D2A84183600F53F5F /* FriendDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailView.swift; sourceTree = "<group>"; };
 		9064AD302A841A0F00F53F5F /* FriendDetailInfoViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailInfoViewData.swift; sourceTree = "<group>"; };
 		9064AD322A841A5300F53F5F /* FriendDetailInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailInfoView.swift; sourceTree = "<group>"; };
+		9064AD342A84261A00F53F5F /* FriendDetailDataFormatterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailDataFormatterProtocol.swift; sourceTree = "<group>"; };
+		9064AD362A84267700F53F5F /* FriendDetailDataFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailDataFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1002,6 +1006,8 @@
 				9064AD152A84125A00F53F5F /* FriendDetailCoordinator.swift */,
 				9064AD172A84128000F53F5F /* FriendDetailViewController.swift */,
 				9064AD132A84121600F53F5F /* FriendDetailViewModel.swift */,
+				9064AD362A84267700F53F5F /* FriendDetailDataFormatter.swift */,
+				9064AD342A84261A00F53F5F /* FriendDetailDataFormatterProtocol.swift */,
 			);
 			path = FriendDetailCoordinator;
 			sourceTree = "<group>";
@@ -1198,6 +1204,7 @@
 				9064AC782A82D06700F53F5F /* LoginResponse.swift in Sources */,
 				9064AC8C2A82D36600F53F5F /* LoginDataRepository.swift in Sources */,
 				9064AD2C2A8417DD00F53F5F /* FriendDetailViewData.swift in Sources */,
+				9064AD352A84261A00F53F5F /* FriendDetailDataFormatterProtocol.swift in Sources */,
 				9064AC9B2A83B1BB00F53F5F /* FriendListViewController.swift in Sources */,
 				9064AC102A82748D00F53F5F /* LoginViewModel.swift in Sources */,
 				9064AD292A84176800F53F5F /* FriendDetailHeaderReusableView.swift in Sources */,
@@ -1214,6 +1221,7 @@
 				9064AD2E2A84183600F53F5F /* FriendDetailView.swift in Sources */,
 				9064AD252A84170D00F53F5F /* GenericUICollectionReusableView.swift in Sources */,
 				9064ACE02A83C9E000F53F5F /* GenericCollectionViewCell.swift in Sources */,
+				9064AD372A84267700F53F5F /* FriendDetailDataFormatter.swift in Sources */,
 				90577C5F2A825F3400B8CE6C /* AppDelegate.swift in Sources */,
 				9064ACCD2A83C54400F53F5F /* FriendContentDisplayerViewData.swift in Sources */,
 				9064ACB72A83BC0900F53F5F /* FriendListServiceProvider.swift in Sources */,

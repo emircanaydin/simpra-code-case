@@ -17,7 +17,7 @@ class FriendDetailViewController: BaseViewController<FriendDetailViewModel> {
     
     private func addFriendDetail() {
         friendDetailView = FriendDetailView()
-        friendDetailView.setData(data: FriendDetailViewData(headerViewData: FriendDetailHeaderViewData(imageContainerData: CustomImageViewComponentData(imageUrl: viewModel.friendData?.picture.large ?? "")), friendInfoViewData: FriendDetailInfoViewData(name: "Emircan Aydın", email: viewModel.friendData?.email ?? "", phone: viewModel.friendData?.phone ?? "", address: "Yenikent mah. Dicle Cad Gebze İzmit/Kocaeli")))
+        friendDetailView.setData(data: viewModel.getDetailViewData())
         self.view.addSubview(friendDetailView)
         
         friendDetailView.snp.makeConstraints { make in

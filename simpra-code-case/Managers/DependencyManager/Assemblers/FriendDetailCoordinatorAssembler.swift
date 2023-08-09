@@ -13,5 +13,6 @@ class FriendDetailCoordinatorAssembler: Assembly {
     func assemble(container: Container) {
         container.autoregister(FriendDetailCoordinator.self, initializer: FriendDetailCoordinator.init).inObjectScope(.weak)
         container.autoregister(FriendDetailViewModel.self, initializer: FriendDetailViewModel.init).inObjectScope(.weak)
+        container.autoregister(FriendDetailDataFormatterProtocol.self, initializer: FriendDetailDataFormatter.init).inObjectScope(.weak)
     }
 }
